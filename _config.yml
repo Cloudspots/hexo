@@ -112,3 +112,6 @@ markdown:
     - markdown-it-texmath
   typographer: false
   quotes: false
+
+url: https://cloudspots.github.io/hexo
+root: /hexo/
