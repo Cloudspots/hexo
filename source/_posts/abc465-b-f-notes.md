@@ -2,7 +2,7 @@
 title: ABC465 B~F
 date: 2026-7-5 12:11:45
 categories:
-  - Unclassified
+  - Solution
 tags: []
 ---
 # B

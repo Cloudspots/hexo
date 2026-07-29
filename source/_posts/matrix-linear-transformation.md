@@ -3,7 +3,8 @@ title: 矩阵——线性变换的高峰
 date: 2026-4-25 20:00:31
 categories:
   - Algorithm & Theory
-tags: []
+tags:
+  - Matrix
 ---
 # 矩阵——线性变换的高峰
 
@@ -166,7 +167,7 @@ $$\begin{aligned}\det(A)=&\sum_{p}(-1)^{\operatorname{inv}(p)}\prod a_{p}\\=&\su
 
 容易发现，范德蒙德矩阵的行列式为 $\displaystyle\prod_{0\le j<k\le n-1}(x_k-x_j)$。
 
-### *秩
+### \*秩
 
 定义**线性相关**为，一组向量 $v_1,v_2,\dots,v_n$，如果存在一个数组 $a_1,a_2,\dots,a_n$ 满足 $\exist i,a_i\neq 0$ 且 $\sum v_ia_i=0$（$0$ 指零向量）。
 
@@ -210,7 +211,7 @@ $$\begin{aligned}Av=&\lambda v\\Av=&I\lambda v\\(A-\lambda I)v=&0\\\det(A-\lambd
 
 我们就得到了一个充要条件。即，$\det(A-I\lambda)=0$。解方程很简单。可能有多解。
 
-## *线性递推？
+## \*线性递推？
 
 ### Fibonacci 数列
 

@@ -2,7 +2,7 @@
 title: Tarjan 的一堆算法学习笔记
 date: 2025-1-14 14:34:20
 categories:
-  - Unclassified
+  - Algorithm & Theory
 tags: []
 ---
 # For all

@@ -2,7 +2,7 @@
 title: DEF
 date: 2026-4-25 21:48:47
 categories:
-  - Unclassified
+  - Solution
 tags: []
 ---
 ## D

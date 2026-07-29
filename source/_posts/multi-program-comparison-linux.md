@@ -2,7 +2,7 @@
 title: 适合 Linux 宝宝体质的多方对拍
 date: 2026-5-16 18:15:56
 categories:
-  - Unclassified
+  - Technology & Engineering
 tags: []
 ---
 racket.cpp（主程序）

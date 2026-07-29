@@ -2,7 +2,9 @@
 layout: blog
 title: 记一次把所有洛谷专栏迁移到 `github.io` 的经历
 date: 2026-07-26 20:49:16
+category: Technology & Engineering
 tags:
+  - Engineering
 ---
 # 记一次把所有洛谷专栏迁移到 `github.io` 的经历
 
@@ -250,7 +252,7 @@ Hexo 头里面是 `layout`，`title`，`date`，`category`，`tags`，这个你�
 
 启用资源目录，让 AI 写一个脚本提取所有文章中的所有图片，下载下来，放到资源目录中。
 
-有两张图片炸了？？其中一张通过翻 `git` 记录发现不知道为啥删掉了，成功恢复。
+有两张图片炸了？？其中一张通过翻 `git` 记录发现不知道为啥删掉了，成功恢复。另一张恢复失败，无法找回。
 
 ### 洛谷 Markdown 语法支持
 
@@ -518,3 +520,40 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
 ```
 
 :::
+
+#### `anti-ai`
+
+使用 `hexo-text-pipeline` 插件。使用下面的 `pipeline`：
+
+:::info[`text-pipeline/anti-ai.js`]
+
+```javascript
+// text-pipeline/anti-ai.js
+module.exports = {
+  // 在 Markdown 渲染前处理（原始文本）
+  stage: 'before_post_render',
+
+  // 使用 replace 数组：每个元素为 [正则, 替换字符串]
+  replace: [
+    [
+      // 匹配整行：行首可选空白 + ::anti-ai[...] + 行尾可选空白
+      /^\s*::anti-ai\[[^\]]*\]\s*$/gm,
+      ''  // 替换为空（即删除该行）
+    ]
+  ]
+};
+```
+
+:::
+
+## 阶段 $3$：Github Pages
+
+在 Deepseek 老师的指导下搞了出来。
+
+首先在 Hexo 根目录下 `git init` 一下。然后由于我们要实现的效果是访问 <https://cloudspots.github.io/hexo/> 而不是 <https://cloudspots.github.io/> 访问 Hexo 博客，所以我们新建一个仓库 `hexo`。
+
+然后直接推到这个仓库下（Hexo 根目录下面有内置 `.gitignore` 文件。根据 Deepseek 老师的教诲，我们需要删除 `themes/next/.git` 文件夹，否则会挂掉）。配置一下 Github Actions，做完了！
+
+现在 <https://cloudspots.github.io/hexo/> 就可以看到博客了。
+
+巨佬 small\_lemon\_qwq 直接简单粗暴地把 `public` 文件夹传上去……听说能用，但有点难评。

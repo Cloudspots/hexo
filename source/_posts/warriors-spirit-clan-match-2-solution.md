@@ -2,7 +2,7 @@
 title: 猫武士灵族 切磋赛 #2 题解
 date: 2024-11-28 22:06:18
 categories:
-  - Unclassified
+  - Solution
 tags: []
 ---
 # 休闲·娱乐

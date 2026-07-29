@@ -3,7 +3,8 @@ title: 单调队列学习笔记
 date: 2025-2-5 11:21:25
 categories:
   - Algorithm & Theory
-tags: []
+tags:
+	- Monotonic Queue
 ---
 # 被单调队列了
 

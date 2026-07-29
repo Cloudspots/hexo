@@ -3,7 +3,9 @@ title: lowbit(a^n-b^n)
 date: 2025-11-26 16:02:21
 categories:
   - Algorithm & Theory
-tags: []
+tags:
+  - Mathematics
+  - Binary
 ---
 给定 $a,b,n\le 10^6$，求 $\mathrm{lowbit}(a^n-b^n)$。有原题，但是在哪呢。
 

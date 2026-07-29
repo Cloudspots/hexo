@@ -2,8 +2,10 @@
 title: ABC441
 date: 2026-1-18 14:41:54
 categories:
-  - Algorithm & Theory
-tags: []
+  - Solution
+tags:
+  - Solution
+  - Atcoder Problem Solution
 ---
 A 不讲。
 

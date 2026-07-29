@@ -2,7 +2,7 @@
 title: VIM 键位小练习
 date: 2026-5-24 11:56:49
 categories:
-  - Unclassified
+  - Technology & Engineering
 tags: []
 ---
 其实是推箱子。

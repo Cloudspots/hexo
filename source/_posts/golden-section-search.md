@@ -2,7 +2,7 @@
 title: 黄金分割三分？
 date: 2026-6-15 17:41:20
 categories:
-  - Unclassified
+  - Algorithm & Theory
 tags: []
 ---
 一般的三分：在区间 $[l,r]$ 中选择两个点 $x,y$ 满足 $x<y$，根据 $f(x)$ 和 $f(y)$ 的大小关系决定保留 $[l,y]$ 还是 $[x,r]$。

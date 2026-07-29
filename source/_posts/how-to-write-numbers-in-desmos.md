@@ -2,7 +2,7 @@
 title: 如何在 desmos 里写数字？
 date: 2024-10-1 19:01:58
 categories:
-  - Unclassified
+  - Technology & Engineering
 tags: []
 ---
 > 众所周知，desmos 图灵完备。

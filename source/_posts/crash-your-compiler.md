@@ -2,7 +2,7 @@
 title: 炸炸你的编译器
 date: 2026-5-23 08:45:33
 categories:
-  - Unclassified
+  - Entertainment
 tags: []
 ---
 ```cpp

@@ -3,7 +3,8 @@ title: 浅谈并查集
 date: 2025-2-5 08:36:26
 categories:
   - Algorithm & Theory
-tags: []
+tags:
+  - DSU
 ---
 > 都说了浅谈了，就不要这样了嘛：
 >

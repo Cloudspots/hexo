@@ -2,7 +2,7 @@
 title: CDE
 date: 2026-5-23 22:08:10
 categories:
-  - Unclassified
+  - Solution
 tags: []
 ---
 # C

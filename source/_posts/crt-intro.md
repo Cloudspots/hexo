@@ -3,7 +3,8 @@ title: 浅谈中国剩余定理（Chinese Remainder Theorem，CRT）
 date: 2025-6-5 20:07:30
 categories:
   - Algorithm & Theory
-tags: []
+tags:
+  - CRT
 ---
 # 浅谈中国剩余定理（Chinese Remainder Theorem，CRT）
 

@@ -2,7 +2,7 @@
 title: 圆锥体积公式推导
 date: 2024-10-15 23:24:31
 categories:
-  - Unclassified
+  - K12 Study
 tags: []
 ---
 众所周知 $\text{圆锥体积}=\dfrac{1}{3}\text{圆柱体积}$。

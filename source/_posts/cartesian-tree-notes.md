@@ -3,7 +3,8 @@ title: 笛卡尔树学习笔记
 date: 2025-9-12 16:46:13
 categories:
   - Algorithm & Theory
-tags: []
+tags:
+  - Cartesian Tree
 ---
 因为只有模版题所以不好意思交全站推荐。
 

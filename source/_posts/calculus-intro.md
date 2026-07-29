@@ -2,8 +2,9 @@
 title: 微积分入门（真的很入门）
 date: 2024-8-7 16:22:32
 categories:
-  - Technology & Engineering
+  - K12 Study
 tags: []
+updated: 2026-7-29 21:58:37
 ---
 > update：![](pA6Ojtx.png)
 
@@ -232,15 +233,15 @@ $$ \lim\limits_{\mathrm dx \to 0} \sum_{i={0 \over \mathrm dx}}^{({3\pi \over 2}
 
 > update：这里用 $i$ 不太好，如果出现复数可能会引起歧义。但是懒得改了。
 
-但是，这种 $ \lim\limits_{\mathrm dx \to 0} \sum \limits_{i={a \over \mathrm dx}}^{b \over \mathrm dx} f(\mathrm dxi)\mathrm dx $ 形式的式子在微积分里面太常见了，所以简记做 $ \int _a^b f(x)\mathrm dx $。
+但是，这种 $\lim\limits_{\mathrm dx \to 0} \sum \limits_{i={a \over \mathrm dx}}^{b \over \mathrm dx} f(\mathrm dxi)\mathrm dx$ 形式的式子在微积分里面太常见了，所以简记做 $ \int _a^b f(x)\mathrm dx $。
 
 换句话说，我们要求 $\int_0^{3\pi \over 2}\sin(x)\mathrm dx$。
 
 ## 特别厉害的注意力
 
-我们要求 $ \int _a^b f\color{red}'\color{normal}(x)\mathrm dx $。
+我们要求 $\int _a^b f\color{red}'\color{normal}(x)\mathrm dx$。
 
-而 $f'(x)$ 就是 $$ \lim\limits_{\Delta x \to 0} \frac{f(x + \Delta x)-f(x)}{\Delta x} $$。
+而 $f'(x)$ 就是 $\lim\limits_{\Delta x \to 0} \frac{f(x + \Delta x)-f(x)}{\Delta x}$。
 
 然而这里 $\Delta x$ 和 $\mathrm dx$ 都是趋近于 $0$ 的，可以合并在一起。
 
@@ -272,7 +273,7 @@ $ \sin x $ 的原函数是 $-\cos x$，所以答案就是 $(-\cos \frac{3\pi}{2}
 
 这就是求定积分的简单方法：微积分基本定理，但是前提是这个函数你能求出它的原函数。
 
-其实计算机对于一般的函数求积分还是分成极小的小块。
+~~其实计算机对于一般的函数求积分还是分成极小的小块。~~ update on 2026/7/29: 辛普森&自适应辛普森：？
 
 比如：
 
@@ -303,7 +304,7 @@ $ \sin x $ 的原函数是 $-\cos x$，所以答案就是 $(-\cos \frac{3\pi}{2}
 
 ## 习题 $1.1$
 
-$ x^x = {(e^{\ln x})}^x=e^{x\ln x} $，然后我们就可以用复合函数求导解决。
+$x^x = {(e^{\ln x})}^x=e^{x\ln x}$，然后我们就可以用复合函数求导解决。
 
 $(e^x)'=e^x,x\ln x$ 求导可以用函数乘积求导解决。
 

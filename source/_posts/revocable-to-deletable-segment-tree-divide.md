@@ -3,7 +3,9 @@ title: 从可撤销到可删除——线段树分治
 date: 2025-12-31 12:50:32
 categories:
   - Algorithm & Theory
-tags: []
+tags:
+  - Divide and Conquer
+  - Segment Tree
 ---
 并查集支持撤销，但不支持删除（好像是支持的？但假设我们不会它。毕竟这里并查集可以改成任意可撤销但不可删除的数据结构）。
 

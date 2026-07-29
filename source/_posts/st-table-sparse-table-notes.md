@@ -2,8 +2,9 @@
 title: ST 表，稀疏表和 Sparse Table 学习笔记
 date: 2025-2-17 11:29:05
 categories:
-  - Unclassified
-tags: []
+  - Algorithm & Theory
+tags:
+	- Sparse Table
 ---
 > 关于标题：云吞，混沌和包面。
 

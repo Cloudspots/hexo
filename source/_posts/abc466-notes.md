@@ -2,7 +2,7 @@
 title: ABC466 小记
 date: 2026-7-11 21:43:01
 categories:
-  - Unclassified
+  - Solution
 tags: []
 ---
 顺序：EDCBAFG。

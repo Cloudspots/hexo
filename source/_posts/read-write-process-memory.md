@@ -2,7 +2,7 @@
 title: 如何读写进程内存空间
 date: 2024-12-23 13:40:06
 categories:
-  - Unclassified
+  - Technology & Engineering
 tags: []
 ---
 前置知识：一个小 trick，如果代码里只有一行 `#include "con"`，那么使用 G++ 编译时输入代码然后按 Ctrl+Z 相当于源文件里有你输入的代码。
