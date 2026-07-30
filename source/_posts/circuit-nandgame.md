@@ -106,10 +106,7 @@ tags: []
 
 也就是说：
 
-$$\def\and{\operatorname{and}}\def\or{\operatorname{or}}\def\not{\operatorname{not}}\def\nand{\operatorname{nand}}\begin{aligned}
-x\and y&=(\not \not x) \and (\not \not y)\\
-&=\not(\not x \or \not y)
-\end{aligned}$$
+$$\def\and{\operatorname{and}}\def\or{\operatorname{or}}\def\not{\operatorname{not}}\def\nand{\operatorname{nand}}\begin{aligned}x\and y&=(\not \not x) \and (\not \not y)\\&=\not(\not x \or \not y)\end{aligned}$$
 
 于是我们就可以反着推出来，$\def\and{\operatorname{and}}\def\or{\operatorname{or}}\def\not{\operatorname{not}}\def\nand{\operatorname{nand}}x \or y=\not(\not x \and \not y)=\not x \nand \not y$。
 
@@ -121,11 +118,7 @@ x\and y&=(\not \not x) \and (\not \not y)\\
 
 这样的描述太抽象了，我们直接上公式：
 
-$$\def\and{\operatorname{and}}\def\or{\operatorname{or}}\def\nnot{\operatorname{not}}\def\nand{\operatorname{nand}}\def\xor{\operatorname{xor}}\begin{aligned}
-x \xor y&=[x \neq y]\\
-&=[x=0 \and y=1]\or[x=1 \and y=0]\\
-&=(\nnot x \and y) \or (x \and \nnot y)
-\end{aligned}$$
+$$\def\and{\operatorname{and}}\def\or{\operatorname{or}}\def\nnot{\operatorname{not}}\def\nand{\operatorname{nand}}\def\xor{\operatorname{xor}}\begin{aligned}x \xor y&=[x \neq y]\\&=[x=0 \and y=1]\or[x=1 \and y=0]\\&=(\nnot x \and y) \or (x \and \nnot y)\end{aligned}$$
 
 但是这样需要的逻辑门太多了，我们从另一种方向考虑。
 

@@ -59,11 +59,13 @@ updated: 2026-07-21 10:53:22
 
 这个方法还有一种特别直观的几何方法理解。
 
-$$ \begin{aligned}&\color{blue}\hspace{8pt}\overline{\hspace{29pt}}\\&\color{normal}\underline{\hspace{61pt}}\\&\underline{\hspace{29pt}}\hspace{3pt}\underline{\hspace{29pt}}\\&\underline{\hspace{13pt}}\hspace{3pt}\underline{\hspace{13pt}}\hspace{3pt}\underline{\hspace{13pt}}\hspace{3pt}\underline{\hspace{13pt}}\\&\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\end{aligned} % 用 \KaTeX 画线，你也是个神人$$
+$$ \begin{aligned}&\color{blue}\hspace{8pt}\overline{\hspace{29pt}}\\&\color{normal}\underline{\hspace{61pt}}\\&\underline{\hspace{29pt}}\hspace{3pt}\underline{\hspace{29pt}}\\&\underline{\hspace{13pt}}\hspace{3pt}\underline{\hspace{13pt}}\hspace{3pt}\underline{\hspace{13pt}}\hspace{3pt}\underline{\hspace{13pt}}\\&\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\end{aligned} % 用 \KaTeX 画线，你也是个神人
+$$
 
 读者可以自行想象上面这条蓝色的查询线段从上往下落下来，遇到它包含的区间就贴上去，否则直接忽略、掉下来。最终会是这样：
 
-$$ \begin{aligned}&\color{normal}\underline{\hspace{61pt}}\\&\underline{\hspace{29pt}}\hspace{3pt}\underline{\hspace{29pt}}\\&\underline{\hspace{13pt}}\hspace{3pt}\color{blue}\underline{\hspace{13pt}}\hspace{3pt}\underline{\hspace{13pt}}\color{normal}\hspace{3pt}\underline{\hspace{13pt}}\\&\underline{\hspace{5pt}}\hspace{3pt}\color{blue}\underline{\hspace{5pt}}\color{normal}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\end{aligned} % 神人 Lionblaze，快去做题 $$
+$$ \begin{aligned}&\color{normal}\underline{\hspace{61pt}}\\&\underline{\hspace{29pt}}\hspace{3pt}\underline{\hspace{29pt}}\\&\underline{\hspace{13pt}}\hspace{3pt}\color{blue}\underline{\hspace{13pt}}\hspace{3pt}\underline{\hspace{13pt}}\color{normal}\hspace{3pt}\underline{\hspace{13pt}}\\&\underline{\hspace{5pt}}\hspace{3pt}\color{blue}\underline{\hspace{5pt}}\color{normal}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\hspace{3pt}\underline{\hspace{5pt}}\end{aligned} % 神人 Lionblaze，快去做题 
+$$
 
 我们形式化描述一下这个算法！
 

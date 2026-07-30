@@ -58,7 +58,7 @@ $$ S(x)=\sum_{i=0}^{n-1} x^i$$
 
 相应地，我们构造多项式 $x-1$，把这个多项式乘 $S$ 可以得到：
 
-$$ \begin{array}{c c c c c}&1&1&1&\dots&1&1&1\\
+$$ \begin{array}{c c c c c c c c}&1&1&1&\dots&1&1&1\\
 \times&&&&&&1&-1\\
 \hline &-1&-1&-1&\dots&-1&-1&-1\\
 1&1&1&1&\dots&1&1\\
