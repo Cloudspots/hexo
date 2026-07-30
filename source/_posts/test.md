@@ -6,6 +6,9 @@ category:
 tags:
   - test
 ---
+
+:::info[test case \#1]
+
 :::warning[test 1]
 
 :::info[123]
@@ -136,4 +139,26 @@ $$\sum_{i=1}^n\dfrac{n(n+1)}{2}$$
 :::  
 
 ::anti-ai[123]
+:::
+
+:::
+
+:::info[test case \#2]
+
+$\begin{bmatrix}1&2\\3&4\end{bmatrix}$
+
+$$\begin{bmatrix}1&2\\3&4\end{bmatrix}$$
+
+$\begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}$
+
+$$\begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}$$
+
+$$\left\lfloor\dfrac{1}{2}\right\rfloor=0$$
+
+$\left\lfloor\dfrac{1}{2}\right\rfloor=0$
+
+$$\left\lceil\dfrac{1}{2}\right\rceil=1$$
+
+$\left\lceil\dfrac{1}{2}\right\rceil=1$
+
 :::

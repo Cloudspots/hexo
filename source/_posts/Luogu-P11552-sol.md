@@ -23,9 +23,9 @@ update：修正了三处笔误。审核员太勤劳了。
 
 根据上面的分析，需要满足 $\left\lfloor\dfrac{w}{a+2d}\right\rfloor \times \left\lfloor\dfrac{h}{b+2d}\right\rfloor \ge n$ 或 $\left\lfloor\dfrac{w}{b+2d}\right\rfloor \times \left\lfloor\dfrac{h}{a+2d}\right\rfloor \ge h$，也就是：
 
-$$$$\max\left(
+$$\max\left(
 \left\lfloor\dfrac{w}{a+2d}\right\rfloor \times \left\lfloor\dfrac{h}{b+2d}\right\rfloor,
-\left\lfloor\dfrac{w}{b+2d}\right\rfloor \times \left\lfloor\dfrac{h}{a+2d}\right\rfloor \right) \ge n$$$$
+\left\lfloor\dfrac{w}{b+2d}\right\rfloor \times \left\lfloor\dfrac{h}{a+2d}\right\rfloor \right) \ge n$$
 
 然后考虑二分上下界。显然下界为 $0$，没那么显然但还是挺显然的，上界为 $\min\left(\dfrac{w}{2},\dfrac{h}{2}\right)$（这是 $a=b=0$ 的情况），但是因为 $d$ 为整数，所以实际上在代码里使用的是 $\left\lfloor\dfrac{\min\left(w,h\right)}{2}\right\rfloor$。
 

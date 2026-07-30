@@ -4,6 +4,7 @@ date: 2025-2-14 21:54:12
 categories:
   - Technology & Engineering
 tags: []
+updated: 2025-07-29 11:25:30
 ---
 [云剪贴板解密](https://www.luogu.com/article/4njgcdl2)。
 
@@ -15,7 +16,9 @@ $\raisebox{250pt}{}$
 
 # 第零关：犇犇入口
 
-首先我们注意到图片没法看，然后稍微对我有些了解的人都会知道我的网站的网址之一是 <https://cloudspots-tools.pages.dev>，所以把 `--` 改为 `-` 即可查看。
+~~首先我们注意到图片没法看，然后稍微对我有些了解的人都会知道我的网站的网址之一是 <https://cloudspots-tools.pages.dev>，所以把 `--` 改为 `-` 即可查看。~~
+
+由于这里是 Hexo，所以注意到 `jiemistrat.png` 拼错了，正确拼写是 `jiemistart.png`，这是真实图片。
 
 然后我们发现那个云剪贴板链接进去是“你走错力！”，并且没有什么。
 
@@ -27,7 +30,9 @@ $\raisebox{250pt}{}$
 
 注意到点击链接后进入了一个帖子页面。上 lglg.top [查看](https://lglg.top/1057907)。
 
-> LionBlaze 说：最初做这个解密的时候洛谷讨论区还在。当时更坑，原因见下。
+> ~~LionBlaze 说：最初做这个解密的时候洛谷讨论区还在。当时更坑，原因见下。~~
+>
+> upd on 2026/07/29: 讨论区早就活了。
 
 注意到第一条回复是消息“玄关”，但是 Ctrl+F 搜索“玄关”却并没有结果。F12 发现，玄关二字之间存在一个 $\KaTeX$，源码为 `%naisu0ac`。其中，`%` 是 $\KaTeX$ 注释，故没有显示。
 

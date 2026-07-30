@@ -168,7 +168,7 @@ $$ \begin{aligned} &\begin{bmatrix}a&b\\c&d\end{bmatrix}\left(\begin{bmatrix}e&f
 
 先介绍一个单位矩阵的概念，其实就是多个最纯粹的基向量拼起来。比如二阶单位矩阵为 $\begin{bmatrix} 1& 0 \\ 0 & 1 \end{bmatrix}$，三阶单位矩阵为 $\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1  \end{bmatrix}$，$n$ 阶单位矩阵同理，但是可以记为 $I_n$，如果只给了一个 $I$ 那么 $n$ 就看上下文。如果上下文也没说那你就去和作者干。
 
-介绍一种方法：先把这个矩阵和单位矩阵拼起来，类似这样：$ \left[\begin{array}{c c|c c} a&b&1&0 \\ c&d&0&1 \end{array}\right] $（这 $\KaTeX$ 好难打），然后进行初等行变换直到左边为单位矩阵，类似这样：$ \left[\begin{array}{c c|c c} 1&0&e&f \\ 0&1&g&h \end{array}\right] $，右边的就是 $A$ 的逆。
+介绍一种方法：先把这个矩阵和单位矩阵拼起来，类似这样：$\left[\begin{array}{c c|c c} a&b&1&0 \\ c&d&0&1 \end{array}\right]$（这 $\KaTeX$ 好难打），然后进行初等行变换直到左边为单位矩阵，类似这样：$\left[\begin{array}{c c|c c} 1&0&e&f \\ 0&1&g&h \end{array}\right]$，右边的就是 $A$ 的逆。
 
 初等行变换是什么？
 1. 交换两行，记作 $r_a \leftrightarrow r_b$。

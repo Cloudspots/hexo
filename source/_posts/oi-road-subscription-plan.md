@@ -4,10 +4,11 @@ date: 2024-11-28 22:16:26
 categories:
   - Entertainment
 tags: []
+updated: 2026-07-29 11:27:35
 ---
 在本专栏下回复“dy”可以订阅，回复“td”可以退订，回复不合法内容触发惊喜。
 
-[回到小说](https://www.luogu.com.cn/article/lv15w0ny)
+[回到小说](/hexo/2024/11/23/oi-story/)
 
 订阅：每次更新会批量发送私信。每人一条。
 

@@ -3,7 +3,9 @@ title: 【小说】OI 之路
 date: 2024-11-23 21:41:09
 categories:
   - Entertainment
-tags: []
+tags:
+  - Story
+updated: 2026-07-29 11:00:00
 ---
 # 前言
 
@@ -17,13 +19,15 @@ tags: []
 
 （目前彩蛋就两个……）
 
-[$\Huge{\text{新鲜出炉的订阅计划}}$](https://www.luogu.com/article/xf7djxem)
+[$\Huge{\text{新鲜出炉的订阅计划}}$](/hexo/2024/11/28/oi-road-subscription-plan/)
 
-[$\huge{\text{更多信息\&人物报名戳这里}}$](https://www.luogu.com/article/6tka1ge5)
+[$\huge{\text{更多信息\&人物报名戳这里}}$](/hexo/2024/12/05/oi-road-science/)
 
 准备写至少两部。已经想好第二部怎么写了，现在想怎么承接。如果需要剧透的私信。
 
 tip:从第六章开始都是作者在本地编辑器写的，编辑器没有渲染，所以 Markdown/$\KaTeX$ 炸了提醒我一下。
+
+upd on 2026/7/29：修正了不规范的 $\KaTeX$，适配 Hexo 链接。
 
 ## 第 $1$ 部
 
@@ -35,7 +39,7 @@ tip:从第六章开始都是作者在本地编辑器写的，编辑器没有渲�
 
 但是呢，他发现小 $\lceil$ 有一个这样的东西（见下图），于是便问这是什么？
 
-> 20270718 注：这里有张图，但是这张图我用尽所有方法都无法找到了。图片链接是 <https://cloudspots.github.io/images/OI_road/1.png>，现在已经 404 了。
+> 20270718 注：这里有张图，但是这张图我用尽所有方法都无法找到了。图片链接是 <https://cloudspots.github.io/images/OI_road/1.png>，现在已经 404 了。我觉得可能是 VS 的图标。
 
 小 $\lceil$ 回答：$\lceil \text{这是 Visual Studio，简称 devenv}$[^4]$\text{，可强大了！} \rfloor$
 
@@ -65,8 +69,7 @@ $\lceil \text{别急。} \rfloor$ 小 $\lceil$ 回答，$\lceil \text{你按下 
 
 小 $\lfloor$ 按下了 $\text{Ctrl+Shift+A}$，创建了一个文件。
 
-$\lceil \text{现在，你已经拥有了 }\lceil \text{OI 之力} \rfloor \text{，正式成为了一名 } \lceil \text{OIer} \rfloor \text{，只是还不知道如何使用 } \\
-\lceil \text{OI 之力} \rfloor \text{。} \rfloor$ 小 $\lceil$ 说，$\lceil \text{现在，我来教你}\dots \rfloor$
+$\lceil \text{现在，你已经拥有了 }\lceil \text{OI 之力} \rfloor \text{，正式成为了一名 } \lceil \text{OIer} \rfloor \text{，只是还不知道如何使用 } \\\lceil \text{OI 之力} \rfloor \text{。} \rfloor$ 小 $\lceil$ 说，$\lceil \text{现在，我来教你}\dots \rfloor$
 
 很快天色变暗，灌木丛中传来小 $\lfloor$ 和 $\lceil$ 上课的声音 $\dots$
 
@@ -102,15 +105,15 @@ $\lceil$ [$\text{这样}$](https://www.luogu.com.cn/record/191499712)$\text{。}
 
 小 $\lfloor$ 和小 $\lceil$ 连忙出去一看，发现一个很大的东西爆炸了，地上留下一个 [$\color{#52c41a}\mathbb{AC}$](https://www.luogu.com.cn/record/175975226) 和 $2 \times 2$ 的一个数字方阵。
 
-$ \lceil \text{声音这么大} \dots \text{不会是黄题吧} \dots \rfloor $ 小 $\lceil$ 低声说道。
+$\lceil \text{声音这么大} \dots \text{不会是黄题吧} \dots \rfloor$ 小 $\lceil$ 低声说道。
 
 旁边把那只 $\lceil \text{题目} \rfloor$ 爆掉的猫转过身来，说：
 
-$ \lceil \text{猜错啦，是} \lceil \text{绿题} \rfloor \text{。} \rfloor$
+$\lceil \text{猜错啦，是} \lceil \text{绿题} \rfloor \text{。} \rfloor$
 
-$ \lceil \text{原来是你啊，又在虐题。} \rfloor$ 小 $\lceil$ 看清了他的脸，说道。
+$\lceil \text{原来是你啊，又在虐题。} \rfloor$ 小 $\lceil$ 看清了他的脸，说道。
 
-$ \lceil \text{不是吧，} \lceil \text{绿题} \rfloor \text{是这么容易就能爆掉的？} \rfloor$ 小 $\lfloor$ 惊呼道。
+$\lceil \text{不是吧，} \lceil \text{绿题} \rfloor \text{是这么容易就能爆掉的？} \rfloor$ 小 $\lfloor$ 惊呼道。
 
 那个把绿题爆掉的 $\lceil \text{OIer} \rfloor$ 微微一笑，说：$\lceil \text{用一波矩阵快速幂就好了}\dots\text{对了，你叫什么名字，之前为什么没见过你。}\rfloor$
 
@@ -122,8 +125,7 @@ $ \lceil \text{不是吧，} \lceil \text{绿题} \rfloor \text{是这么容易�
 
 $\lceil \text{你是怎么发现这只}\lceil \text{绿题} \rfloor \text{的啊？我记得这玩意儿挺稀有的。}\rfloor$ 小 $\lfloor$ 好 奇地问道。
 
-$\lceil \text{哦，有一天我 }\color{#52c41a}\mathbb{AC}\color{#404040}\text{ 了} \lceil\text{万能的 OIH 搜索} \rfloor 这 只 \lceil \text{绿题} \rfloor\text{，然后发现爆出了一个}\lceil \text{洛谷题库搜索} \\
-\rfloor\text{，就可以任意搜索题目了。}\rfloor$[^6] 小 $\rfloor$ 说。
+$\lceil \text{哦，有一天我 }\color{#52c41a}\mathbb{AC}\color{#404040}\text{ 了} \lceil\text{万能的 OIH 搜索} \rfloor \text{这只} \lceil \text{绿题} \rfloor\text{，然后发现爆出了一个}\lceil \text{洛谷题库搜索} \\ \rfloor\text{，就可以任意搜索题目了。}\rfloor$[^6] 小 $\rfloor$ 说。
 
 $\lceil \text{那么} \dots \text{我先走了。} \rfloor$ 小 $\rfloor$ 说完，便飞走了，空中出现一个 $\stackrel{\texttt{<unistd.h>}}{\text{\huge{read}}}$[^7]。
 

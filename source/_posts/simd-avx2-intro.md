@@ -6,7 +6,7 @@ tags:
   - SIMD
   - Optimization
 categories:
-  - Technology & Engineering
+  - Algorithm & Theory
 updated: 2026-07-22 22:11:46
 ---
 本文只包含基础的 SIMD 指令集用法和思想，不包含真正的工业级指令集优化技巧。
