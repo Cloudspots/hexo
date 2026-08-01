@@ -995,3 +995,18 @@ vendors:
 css: css
 js: js
 images: images
+
+# Giscus
+giscus:
+  enable: true
+  repo: Cloudspots/hexo
+  repo_id: R_kgDOTlDRCw
+  category: Announcements
+  category_id: DIC_kwDOTlDRC84DCcbb
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 1
+  input_position: top
+  theme: preferred_color_scheme
+  lang: en    # 建议改成中文
