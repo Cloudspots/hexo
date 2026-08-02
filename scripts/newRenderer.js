@@ -18,7 +18,8 @@ function newRenderer(md, str)
   let res = [];
   const lns = str.split('\n');
   const isend = (s) => { s = s.trim(); if(s.length >= 3 && s == ':'.repeat(s.length)) return s.length; else return -1; }
-  const getstart_f = (s) => { s = s.trim(); let x = s.indexOf('['), y = s.lastIndexOf(']'); if(x == -1 || y == -1) return null; if(!s.startsWith(':::')) return null; for(let i=0;;i++) if(s[i] != ':') return [i,s.substring(i,x),s.substring(x+1,y)]; };
+  const is_open = (s) => { let x = s.lastIndexOf("{open}"); return x != -1 && x > s.lastIndexOf("]"); };
+  const getstart_f = (s) => { s = s.trim(); let x = s.indexOf('['), y = s.lastIndexOf(']'); if(x == -1 || y == -1) return null; if(!s.startsWith(':::')) return null; for(let i=0;;i++) if(s[i] != ':') return [i,s.substring(i,x),s.substring(x+1,y),is_open(s)]; };
   let vals = [];
   let vkp = [[]];
   let tmp = [];
@@ -33,7 +34,7 @@ function newRenderer(md, str)
       // if(vals.length > 1) console.log('!!!\n', g, '!!!\n');
       vkp.pop();
       let res = renderTitle(md, vals[vals.length-1].title);
-      vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type}">
+      vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type}"${vals[vals.length-1].open ? " open" : ""}>
           <summary>${res}</summary>
           <div class="fold-content">${g}</div>
         </details>`);
@@ -44,14 +45,13 @@ function newRenderer(md, str)
     if(r == null)
     {
       tmp.push(lns[i]);
-      // vkp[vkp.length - 1].push(lns[i]);
       continue;
     }
     else
     {
       if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n')));
       tmp = [];
-      vals.push({cnt: r[0], type: r[1], title: r[2]});
+      vals.push({cnt: r[0], type: r[1], title: r[2], open: r[3]});
       vkp.push([]);
     }
   }
@@ -62,7 +62,7 @@ function newRenderer(md, str)
     let g = newRenderer(md, vkp[vkp.length - 1].join('\n'));
     vkp.pop();
     let res = renderTitle(md, vals[vals.length-1].title);
-    vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type}">
+    vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type + (vals[vals.length-1].open ? " open" : "")}">
         <summary>${res}</summary>
         <div class="fold-content">${g}</div>
       </details>`);
