@@ -4,6 +4,8 @@ menu:
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
 
+darkmode: true
+
 # Math Formulas Render Support
 math:
   # Default (true) will load mathjax / katex script on demand.
@@ -23,5 +25,20 @@ math:
     enable: true
     # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
     copy_tex: true
+
+codeblock:
+  theme:
+    light: github
+    dark: github-dark
+  prism:
+    light: prism
+    dark: prism-dark
+  copy_button:
+    enable: true
+    # Show text copy result.
+    show_result: true
+    # Available values: default | flat | mac
+    style: mac
+
 
 
