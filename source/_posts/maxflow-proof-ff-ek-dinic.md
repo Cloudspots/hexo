@@ -168,4 +168,91 @@ updated: 2026-08-02 09:53:19
 
 看起来并不是很优秀，但实际上这个算法在实际情况中跑得非常快，并且基本没有人会去卡。实际上，它在很多特殊情形下复杂度都是对的。比如在单位容量的网络中，时间复杂度是 $O(E\min(E^{\frac{1}{2}},V^{\frac{2}{3}}))$ 的。同时，如果在单位容量的网络中，除了源点和汇点之外所有点入度或者出度都为 $1$，则时间复杂度是 $O(E\sqrt V)$，常用于二分图最大匹配。
 
+:::info[P3376]
+
+[rec](https://www.luogu.com.cn/record/290576467)。
+
+```cpp
+// Dinic
+#include <queue>
+#include <cstdio>
+#include <cstring>
+
+using namespace std;
+
+const auto U = [](auto x) { return [x](auto ...y) { return x(x, y...); }; };
+
+int head[205];
+class edge { public: int v; long long cap; int nxt; } edges[10005];
+int qhead[205];
+int dist[205];
+
+int main()
+{
+  int n, m, s, t;
+  scanf("%d%d%d%d", &n, &m, &s, &t);
+  memset(head, -1, sizeof head);
+  int cur = 0;
+  auto addedge = [&cur](int u, int v, long long w)
+  {
+    edges[cur] = {v, w, head[u]};
+    head[u] = cur;
+    cur++;
+  };
+  for(int i=1;i<=m;i++)
+  {
+    int u, v, w;
+    scanf("%d%d%d", &u, &v, &w);
+    addedge(u, v, w);
+    addedge(v, u, 0);
+  }
+  // Dinic
+  auto bfs = [&]() -> bool // BFS & Initialization & Check
+  {
+    // printf("!\n");
+    memset(dist, 0x3f, sizeof dist);
+    dist[s] = 0;
+    queue<int> q;
+    q.push(s);
+    while(!q.empty())
+    {
+      int u = q.front();
+      q.pop();
+      for(int vid = head[u]; vid != -1; vid = edges[vid].nxt)
+      {
+        if(edges[vid].cap != 0 && dist[u] + 1 < dist[edges[vid].v])
+        {
+          dist[edges[vid].v] = dist[u] + 1;
+          q.push(edges[vid].v);
+        }
+      }
+    }
+    if(dist[t] == 0x3f3f3f3f) return false; // Disconnected
+    for(int i=1;i<=n;i++) qhead[i] = head[i];
+    return true;
+  };
+  auto dfs = U([&](auto &&self, int u, long long val) -> long long
+  {
+    if(u == t) return val;
+    long long sum = 0;
+    for(; qhead[u] != -1; qhead[u] = edges[qhead[u]].nxt)
+    {
+      if(dist[u] + 1 != dist[edges[qhead[u]].v] || !edges[qhead[u]].cap) continue;
+      long long res = self(self, edges[qhead[u]].v, min(edges[qhead[u]].cap, val - sum));
+      edges[qhead[u]].cap -= res;
+      edges[qhead[u] ^ 1].cap += res;
+      sum += res;
+      if(sum == val) return sum;
+    }
+    return sum;
+  });
+  long long sum = 0;
+  while(bfs()) sum += dfs(s, 0x3f3f3f3f3f3f3f3f);
+  printf("%lld\n", sum);
+  return 0;
+}
+```
+
+:::
+
 其它算法以后再学。
