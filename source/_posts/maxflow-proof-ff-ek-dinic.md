@@ -142,6 +142,91 @@ updated: 2026-08-02 09:53:19
 
 所以所有边一共最多成为 $O(VE)$ 次关键边。每次 BFS 时间复杂度 $O(E)$，总时间复杂度就是 $O(VE^2)$。
 
+:::info[P3376]
+
+[rec](https://www.luogu.com.cn/record/290579019)。
+
+```cpp
+// EK
+#include <queue>
+#include <cstdio>
+#include <cstring>
+
+using namespace std;
+
+const auto U = [](auto x) { return [x](auto ...y) { return x(x, y...); }; };
+
+int head[205];
+class edge { public: int v; long long cap; int nxt; } edges[10005];
+int qhead[205];
+int dist[205];
+
+int main()
+{
+  int n, m, s, t;
+  scanf("%d%d%d%d", &n, &m, &s, &t);
+  memset(head, -1, sizeof head);
+  int cur = 0;
+  auto addedge = [&cur](int u, int v, long long w)
+  {
+    edges[cur] = {v, w, head[u]};
+    head[u] = cur;
+    cur++;
+  };
+  for(int i=1;i<=m;i++)
+  {
+    int u, v, w;
+    scanf("%d%d%d", &u, &v, &w);
+    addedge(u, v, w);
+    addedge(v, u, 0);
+  }
+  // Dinic
+  auto bfs = [&]() -> bool // BFS & Initialization & Check
+  {
+    // printf("!\n");
+    memset(dist, 0x3f, sizeof dist);
+    dist[s] = 0;
+    queue<int> q;
+    q.push(s);
+    while(!q.empty())
+    {
+      int u = q.front();
+      q.pop();
+      for(int vid = head[u]; vid != -1; vid = edges[vid].nxt)
+      {
+        if(edges[vid].cap != 0 && dist[u] + 1 < dist[edges[vid].v])
+        {
+          dist[edges[vid].v] = dist[u] + 1;
+          q.push(edges[vid].v);
+        }
+      }
+    }
+    if(dist[t] == 0x3f3f3f3f) return false; // Disconnected
+    for(int i=1;i<=n;i++) qhead[i] = head[i];
+    return true;
+  };
+  auto dfs = U([&](auto &&self, int u, long long val) -> long long
+  {
+    if(u == t) return val;
+    for(; qhead[u] != -1; qhead[u] = edges[qhead[u]].nxt)
+    {
+      if(dist[u] + 1 != dist[edges[qhead[u]].v] || !edges[qhead[u]].cap) continue;
+      long long res = self(self, edges[qhead[u]].v, min(edges[qhead[u]].cap, val));
+      edges[qhead[u]].cap -= res;
+      edges[qhead[u] ^ 1].cap += res;
+      if(res) return res;
+    }
+    return 0;
+  });
+  long long sum = 0;
+  while(bfs()) sum += dfs(s, 0x3f3f3f3f3f3f3f3f);
+  printf("%lld\n", sum);
+  return 0;
+}
+```
+
+:::
+
 以上内容全部参考自《算法导论》。
 
 ### Dinic
