@@ -110,10 +110,16 @@ marked:
   prependRoot: true
   postAsset: true
 
-markdown:
-  plugins:
-    - markdown-it-texmath
-  typographer: false
-  quotes: false
-
 root: /hexo/
+
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: false
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  images:
+    prepend_root: true
+    post_asset: true

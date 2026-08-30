@@ -7,6 +7,16 @@ tags:
   - test
 ---
 
+:::info[case 0]
+
+`\\`
+
+\\
+
+$\\$
+
+:::
+
 :::info[test case \#1]
 
 :::warning[test 1]

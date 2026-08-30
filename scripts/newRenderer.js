@@ -1,19 +1,19 @@
 // scripts/newRenderer.js
 
 // 辅助函数：渲染标题，避免 <p> 包裹
-function renderTitle(md, title) {
+function renderTitle(md, title, env) {
   if (typeof md.renderInline === 'function') {
-    return md.renderInline(title.trim());
+    return md.renderInline(title.trim(), env);
   }
   // 降级方案：手动剔除 <p> 标签（兼容非 markdown-it 环境）
-  let html = md.render(title).trim();
+  let html = md.render(title, env).trim();
   if (html.startsWith('<p>') && html.endsWith('</p>')) {
     return html.slice(3, -4);
   }
   return html;
 }
 
-function newRenderer(md, str)
+function newRenderer(md, str, env)
 {
   let res = [];
   const lns = str.split('\n');
@@ -28,16 +28,16 @@ function newRenderer(md, str)
     let p = isend(lns[i]);
     if(vals.length > 0 && p != -1 && p == vals[vals.length - 1].cnt)
     {
-      if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n')));
+      if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n'), env));
       tmp = [];
-      let g = newRenderer(md, vkp[vkp.length - 1].join('\n'));
+      let g = newRenderer(md, vkp[vkp.length - 1].join('\n'), env);
       // if(vals.length > 1) console.log('!!!\n', g, '!!!\n');
       vkp.pop();
       let res = renderTitle(md, vals[vals.length-1].title);
       vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type}"${vals[vals.length-1].open ? " open" : ""}>
-          <summary>${res}</summary>
-          <div class="fold-content">${g}</div>
-        </details>`);
+<summary>${res}</summary>
+<div class="fold-content">${g}</div>
+</details>`);
       vals.pop();
       continue;
     }
@@ -49,23 +49,23 @@ function newRenderer(md, str)
     }
     else
     {
-      if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n')));
+      if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n'), env));
       tmp = [];
       vals.push({cnt: r[0], type: r[1], title: r[2], open: r[3]});
       vkp.push([]);
     }
   }
-  if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n')));
+  if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n'), env));
   let arp = [];
   while(vkp.length > 1)
   {
-    let g = newRenderer(md, vkp[vkp.length - 1].join('\n'));
+    let g = newRenderer(md, vkp[vkp.length - 1].join('\n'), env);
     vkp.pop();
-    let res = renderTitle(md, vals[vals.length-1].title);
+    let res = renderTitle(md, vals[vals.length-1].title, env);
     vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type + (vals[vals.length-1].open ? " open" : "")}">
-        <summary>${res}</summary>
-        <div class="fold-content">${g}</div>
-      </details>`);
+<summary>${res}</summary>
+<div class="fold-content">${g}</div>
+</details>`);
     vals.pop();
   }
   return vkp[0].join('\n');
@@ -125,11 +125,11 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
     const token = tokens[idx];
     let content = token.content || '';
 
-    return newRenderer(md, content);
+    return newRenderer(md, content, env);
   };
 });
 
-function newRenderer2(md, str)
+function newRenderer2(md, str, env)
 {
   let res = [];
   const lns = str.split('\n');
@@ -143,14 +143,15 @@ function newRenderer2(md, str)
     let p = isend(lns[i]);
     if(vals.length > 0 && p != -1 && p == vals[vals.length - 1].cnt)
     {
-      if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n')));
+      if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n'), env));
       tmp = [];
       let g = newRenderer2(md, vkp[vkp.length - 1].join('\n'));
       // if(vals.length > 1) console.log('!!!\n', g, '!!!\n');
       vkp.pop();
+      // console.log(`!${g}`);
       vkp[vkp.length - 1].push(`<div align="${vals[vals.length-1].ali}">
-          ${g}
-        </div>`);
+${g}
+</div>`);
       vals.pop();
       continue;
     }
@@ -163,21 +164,22 @@ function newRenderer2(md, str)
     }
     else
     {
-      if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n')));
+      if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n'), env));
       tmp = [];
       vals.push({cnt: r[0], ali: r[1]});
       vkp.push([]);
     }
   }
-  if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n')));
+  if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n'), env));
   let arp = [];
   while(vkp.length > 1)
   {
     let g = newRenderer2(md, vkp[vkp.length - 1].join('\n'));
     vkp.pop();
+    // console.log(`?${g}`);
     vkp[vkp.length - 1].push(`<div align="${vals[vals.length-1].ali}">
-          ${g}
-        </div>`);
+${g}
+</div>`);
     vals.pop();
   }
   return vkp[0].join('\n');
@@ -194,7 +196,7 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
     const max = state.eMarks[startLine];
     const lineText = state.src.slice(start, max);
     const isend = (s) => { s = s.trim(); if(s.length >= 3 && s == ':'.repeat(s.length)) return s.length; else return -1; }
-  const getstart_f = (s) => { s = s.trim(); let x = s.indexOf('{'), y = s.lastIndexOf('}'); if(x == -1 || y == -1) return null; if(!s.startsWith(':::')) return null; for(let i=0;;i++) if(s[i] != ':') { if(s.substring(i, x) == 'align') return [i,s.substring(x+1,y)]; else return null; } };
+    const getstart_f = (s) => { s = s.trim(); let x = s.indexOf('{'), y = s.lastIndexOf('}'); if(x == -1 || y == -1) return null; if(!s.startsWith(':::')) return null; for(let i=0;;i++) if(s[i] != ':') { if(s.substring(i, x) == 'align') return [i,s.substring(x+1,y)]; else return null; } };
 
     const startMatch = getstart_f(lineText);
     if (!startMatch) return false;
@@ -237,6 +239,6 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
     const token = tokens[idx];
     let content = token.content || '';
 
-    return newRenderer2(md, content);
+    return newRenderer2(md, content, env);
   };
 });

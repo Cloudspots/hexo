@@ -4,9 +4,10 @@ tags:
   - Number Theory
   - Mathematics
 categories:
-  - Algorithm & Theory
+  - "Algorithm & Theory"
 date: 2026-08-11 21:38:37
 updated: 2026-08-11 21:38:37
+mathjax: true
 ---
 # 二次互反律！
 
@@ -112,11 +113,11 @@ $$ \left(\dfrac{2}{p}\right)=\begin{cases}1&p\equiv 1\pmod 8\lor p\equiv 7\pmod 
 
 $$ \begin{aligned}2\times 4\times 6\times 8\times 10\times 12&\equiv 2\times 4\times 6\times (-5)\times (-3)\times (-1)\\&\equiv (-1)^3\times 6!\\&\equiv -6! \end{aligned}$$
 
-所以 $2^6\equiv -1\pmod 13$。不是哥们，这么牛的？
+所以 $2^6\equiv -1\pmod{13}$。不是哥们，这么牛的？
 
 我们只需要考察 $\displaystyle\prod_{i=1}^{\frac{p-1}{2}} 2i$ 到底是多少个 $-1$ 乘 $\dfrac{p-1}{2}!$。
 
-注意到所有 $<\dfrac{p}{2}$ 的符号都为正，提供了 $\dfrac{p-1}{2}!$ 中的偶数项。$>\dfrac{p}{2}$ 的都为负，提供了奇数项（$\dfrac{p}{2}\not\in \Z$）。所以我们只需要求 $\left[\dfrac{p}{2},p-1\right]$ 中有多少个偶数。换句话说，$\left[\dfrac{p}{4},\dfrac{p-1}{2}\right]$ 中有多少个整数。我们能知道这是 $\dfrac{p-1}{2}-\left\lceil\dfrac{p}{4}\right\rceil+1$ 个。对于 $p\bmod 8$ 分类讨论即可证明上述结论。$\square$
+注意到所有 $<\dfrac{p}{2}$ 的符号都为正，提供了 $\dfrac{p-1}{2}!$ 中的偶数项。$>\dfrac{p}{2}$ 的都为负，提供了奇数项（$\dfrac{p}{2}\not\in \mathbb Z$）。所以我们只需要求 $\left[\dfrac{p}{2},p-1\right]$ 中有多少个偶数。换句话说，$\left[\dfrac{p}{4},\dfrac{p-1}{2}\right]$ 中有多少个整数。我们能知道这是 $\dfrac{p-1}{2}-\left\lceil\dfrac{p}{4}\right\rceil+1$ 个。对于 $p\bmod 8$ 分类讨论即可证明上述结论。$\square$
 
 ## 二次互反律
 
@@ -164,9 +165,9 @@ $$\begin{array}{ll}\left(\dfrac{-1}{p}\right)&=\begin{cases}1&p\equiv 1\pmod 4\\
 
 我们现在先考虑一下模数不是奇质数的情况。
 
-定义雅克比符号（Jacobi Symbol）：$\left(\dbinom{a}{b}\right)=\displaystyle\prod \left(\dfrac{a}{p_i}\right)$，其中 $p_i$ 是 $b$ 的质因数分解中所有指数为奇数的质因子。$\left(\dbinom{a}{1}\right)=1$，因为 $0$ 个数字相乘是 $1$。
+定义雅克比符号（Jacobi Symbol）：$\left(\dfrac{a}{b}\right)=\displaystyle\prod \left(\dfrac{a}{p_i}\right)$，其中 $p_i$ 是 $b$ 的质因数分解中所有指数为奇数的质因子。$\left(\dfrac{a}{1}\right)=1$，因为 $0$ 个数字相乘是 $1$。
 
-注意若 $\left(\dbinom{a}{b}\right)$ 是 $-1$ 则显然 $a$ 必然不是模 $b$ 的 QR。反之则不一定。
+注意若 $\left(\dfrac{a}{b}\right)$ 是 $-1$ 则显然 $a$ 必然不是模 $b$ 的 QR。反之则不一定。
 
 ### 广义二次互反律
 
