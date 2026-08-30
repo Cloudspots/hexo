@@ -78,3 +78,5 @@ $$n\sum_{\frac{n}{2}\le p\le n}2\dbinom{n-1}{p-1}-\dbinom{n}{p}$$
 这个 $\dfrac{n\dbinom{n}{\lfloor\frac{n}{2}\rfloor}}{2^n}$ 大概是多少？
 
 由斯特林公式（$\lim_{n\to +\infty}\dfrac{\sqrt{2\pi n}\left(\dfrac{n}{e}\right)^n}{n!}=1$）可得，$\dfrac{n}{\frac{n}{2}}=\dfrac{n!}{\left(\frac{n}{2}\right)!^2}\sim \dfrac{2^{n+0.5}}{\sqrt{\pi n}}$。带回原式得到 $\dfrac{n\dbinom{n}{\lfloor\frac{n}{2}\rfloor}}{2^n}\sim \sqrt{\dfrac{2n}{\pi}}=\Theta(\sqrt n)$。$\square$
+
+## 还有一个是啥来着（

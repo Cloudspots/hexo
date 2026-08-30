@@ -1,0 +1,182 @@
+.post-body img
+  opacity 1 !important
+
+.post-body img:hover
+  opacity 1 !important
+
+
+/* =========================================================
+ * Fold
+ * ========================================================= */
+
+.fold-info,
+.fold-success,
+.fold-warning,
+.fold-error
+  --fold-color #4c9aff
+
+  margin 1.2em 0
+  border-left 3px solid var(--fold-color)
+  border-radius 0 6px 6px 0
+  background rgba(127, 127, 127, 0.05)
+
+
+/* ---------------------------------------------------------
+ * Colors
+ * --------------------------------------------------------- */
+
+.fold-info
+  --fold-color #4c9aff
+
+.fold-success
+  --fold-color #52b788
+
+.fold-warning
+  --fold-color #e9b949
+
+.fold-error
+  --fold-color #e05252
+
+
+/* ---------------------------------------------------------
+ * Summary
+ * --------------------------------------------------------- */
+
+/*
+ * 不使用 flex。
+ *
+ * summary 中直接包含标题文字和 MathJax，
+ * 保持普通文字流可以避免 MathJax 的 DOM 被 flex
+ * 布局影响。
+ *
+ * 左侧留出箭头的位置，因此标题换行后：
+ *
+ *   > 这是一个很长很长的标题，
+ *     第二行从这里开始
+ *
+ * 而不会回到最左边。
+ */
+
+.fold-info > summary,
+.fold-success > summary,
+.fold-warning > summary,
+.fold-error > summary
+  position relative
+
+  box-sizing border-box
+
+  padding 0.65em 0.8em 0.65em 2.15em
+
+  cursor pointer
+  user-select none
+  font-weight 500
+  list-style none
+  outline none
+
+
+/* ---------------------------------------------------------
+ * Hide browser default arrow
+ * --------------------------------------------------------- */
+
+.fold-info > summary::-webkit-details-marker,
+.fold-success > summary::-webkit-details-marker,
+.fold-warning > summary::-webkit-details-marker,
+.fold-error > summary::-webkit-details-marker
+  display none
+
+
+/* ---------------------------------------------------------
+ * Arrow
+ * --------------------------------------------------------- */
+
+/*
+ * 箭头完全脱离文字排版。
+ *
+ * position: absolute
+ *   → 不会影响标题文字和 MathJax
+ *
+ * top: 50%
+ * translateY(-50%)
+ *   → 无论标题是一行还是两行，都保持垂直居中
+ */
+
+.fold-info > summary::before,
+.fold-success > summary::before,
+.fold-warning > summary::before,
+.fold-error > summary::before
+  content "›"
+
+  position absolute
+
+  left 0.8em
+  top 50%
+
+  width 0.75em
+
+  color var(--fold-color)
+  font-size 1.3em
+  line-height 1
+  text-align center
+
+  transform translateY(-50%)
+
+  transition transform 0.2s ease
+
+
+/* ---------------------------------------------------------
+ * Open arrow
+ * --------------------------------------------------------- */
+
+.fold-info[open] > summary::before,
+.fold-success[open] > summary::before,
+.fold-warning[open] > summary::before,
+.fold-error[open] > summary::before
+  transform translateY(-50%) rotate(90deg)
+
+
+/* ---------------------------------------------------------
+ * Content
+ * --------------------------------------------------------- */
+
+.fold-info > .fold-content,
+.fold-success > .fold-content,
+.fold-warning > .fold-content,
+.fold-error > .fold-content
+  box-sizing border-box
+
+  margin-left 0 !important
+
+  padding 0 1em 0.8em 1.2em !important
+
+
+/* ---------------------------------------------------------
+ * Content paragraphs
+ * --------------------------------------------------------- */
+
+.fold-info > .fold-content p,
+.fold-success > .fold-content p,
+.fold-warning > .fold-content p,
+.fold-error > .fold-content p
+  margin-left 0
+
+
+/* ---------------------------------------------------------
+ * First element
+ * --------------------------------------------------------- */
+
+.fold-info > .fold-content > :first-child,
+.fold-success > .fold-content > :first-child,
+.fold-warning > .fold-content > :first-child,
+.fold-error > .fold-content > :first-child
+  margin-top 0.5em
+
+
+/* ---------------------------------------------------------
+ * Last element
+ * --------------------------------------------------------- */
+
+.fold-info > .fold-content > :last-child,
+.fold-success > .fold-content > :last-child,
+.fold-warning > .fold-content > :last-child,
+.fold-error > .fold-content > :last-child
+  margin-bottom 0

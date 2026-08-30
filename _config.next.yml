@@ -41,5 +41,6 @@ codeblock:
     # Available values: default | flat | mac
     style: mac
 
-
+custom_file_path:
+  style: source/_data/styles.styl
 
