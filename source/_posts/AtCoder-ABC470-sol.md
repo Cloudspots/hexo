@@ -1,5 +1,5 @@
 ---
-title: AtCoder-ABC470-sol
+title: ABC470 题解
 tags:
   - Solution
   - Atcoder Problem Solution

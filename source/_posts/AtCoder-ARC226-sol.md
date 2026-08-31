@@ -1,5 +1,5 @@
 ---
-title: AtCoder-ARC226-sol
+title: "ARC226 A&B&C 题解"
 tags:
   - null
 categories:
