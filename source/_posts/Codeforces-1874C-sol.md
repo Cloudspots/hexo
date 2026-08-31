@@ -1,5 +1,5 @@
 ---
-title: Codeforces-1874C-sol
+title: 1874C 题解
 tags:
   - Codeforces Problem Solution
   - Solution
