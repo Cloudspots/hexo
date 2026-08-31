@@ -33,7 +33,7 @@ function newRenderer(md, str, env)
       let g = newRenderer(md, vkp[vkp.length - 1].join('\n'), env);
       // if(vals.length > 1) console.log('!!!\n', g, '!!!\n');
       vkp.pop();
-      let res = renderTitle(md, vals[vals.length-1].title);
+      let res = renderTitle(md, vals[vals.length-1].title, env);
       vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type}"${vals[vals.length-1].open ? " open" : ""}>
 <summary>${res}</summary>
 <div class="fold-content">${g}</div>
@@ -92,7 +92,6 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
     for(let i=startLine;i<endLine;i++)
     {
       let ibf = state.src.slice(state.bMarks[i] + state.tShift[i], state.eMarks[i]);
-      contentLines.push(ibf);
       let p = isend(ibf);
       if(vals.length > 0 && p != -1 && p == vals[vals.length - 1].cnt)
       {
@@ -104,6 +103,7 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
         vals.pop();
         continue;
       }
+      contentLines.push(ibf);
       let r = getstart_f(ibf);
       if(r == null) continue;
       else vals.push({cnt: r[0], type: r[1], title: r[2]});
@@ -206,7 +206,6 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
     for(let i=startLine;i<endLine;i++)
     {
       let ibf = state.src.slice(state.bMarks[i] + state.tShift[i], state.eMarks[i]);
-      contentLines.push(ibf);
       let p = isend(ibf);
       if(vals.length > 0 && p != -1 && p == vals[vals.length - 1].cnt)
       {
@@ -218,6 +217,7 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
         vals.pop();
         continue;
       }
+      contentLines.push(ibf);
       let r = getstart_f(ibf);
       if(r == null) continue;
       else vals.push({cnt: r[0], ali: r[1]});

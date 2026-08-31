@@ -180,3 +180,93 @@
 .fold-warning > .fold-content > :last-child,
 .fold-error > .fold-content > :last-child
   margin-bottom 0
+
+/* ========================================
+ * Markdown 表格
+ *
+ * 注意：
+ * Next 的代码高亮也使用 <table>，
+ * 所以这里必须限定 markdown-table。
+ * ======================================== */
+
+.post-body table.markdown-table {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  box-shadow: none !important;
+}
+
+.post-body table.markdown-table th,
+.post-body table.markdown-table td {
+  border: 1px solid currentColor !important;
+  text-align: center;
+  padding: 6px 12px;
+}
+
+
+/* ========================================
+ * Tuack 风格
+ * ======================================== */
+
+.post-body table.markdown-table.tuack {
+  border: none !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  box-shadow: none !important;
+}
+
+
+/* 所有单元格 */
+.post-body table.markdown-table.tuack th,
+.post-body table.markdown-table.tuack td {
+  border: 1px solid currentColor !important;
+  text-align: center;
+  padding: 6px 12px;
+}
+
+
+/* ----------------------------------------
+ * 左右两侧没有外框
+ * ---------------------------------------- */
+
+.post-body table.markdown-table.tuack th:first-child,
+.post-body table.markdown-table.tuack td:first-child {
+  border-left: none !important;
+}
+
+.post-body table.markdown-table.tuack th:last-child,
+.post-body table.markdown-table.tuack td:last-child {
+  border-right: none !important;
+}
+
+
+/* ----------------------------------------
+ * 最上面：粗线
+ * ---------------------------------------- */
+
+.post-body table.markdown-table.tuack > thead > tr:first-child > th {
+  border-top: 3px solid currentColor !important;
+}
+
+
+/* ----------------------------------------
+ * 表头下面：中等粗
+ * ---------------------------------------- */
+
+.post-body table.markdown-table.tuack > thead > tr:last-child > th {
+  border-bottom: 2px solid currentColor !important;
+}
+
+
+/* ----------------------------------------
+ * 最下面：粗线
+ * ---------------------------------------- */
+
+/* 普通最后一行 */
+.post-body table.markdown-table.tuack > tbody > tr:last-child > td {
+  border-bottom: 3px solid currentColor !important;
+}
+
+/* rowspan 延伸到最后一行 */
+.post-body table.markdown-table.tuack .table-bottom-cell {
+  border-bottom: 3px solid currentColor !important;
+}
