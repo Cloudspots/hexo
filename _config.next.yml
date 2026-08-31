@@ -44,3 +44,26 @@ codeblock:
 custom_file_path:
   style: source/_data/styles.styl
 
+# Giscus comments (https://giscus.app)
+# Powered by GitHub Discussions of the Cloudspots/hexo repository.
+giscus:
+  enable: true
+  repo: Cloudspots/hexo
+  repo_id: R_kgDOTlDRCw
+  category: Announcements
+  category_id: DIC_kwDOTlDRC84DCcbb
+  # Available values: pathname | url | title | og:title
+  mapping: pathname
+  # Available values: 0 | 1
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 1
+  # Available values: light | dark | preferred_color_scheme | ...
+  theme: preferred_color_scheme
+  # Available values: en | zh-CN
+  lang: zh-CN
+  # Place the comment box above the comments
+  input_position: bottom
+  # Load the comments lazily
+  loading: lazy
+
