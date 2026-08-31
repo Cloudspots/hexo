@@ -1,5 +1,5 @@
 ---
-title: Atcoder-ABC473
+title: ABC473 题解
 tags:
   - Solution
   - Atcoder Problem Solution
