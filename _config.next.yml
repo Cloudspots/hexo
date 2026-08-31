@@ -61,7 +61,7 @@ giscus:
   # Available values: light | dark | preferred_color_scheme | ...
   theme: preferred_color_scheme
   # Available values: en | zh-CN
-  lang: zh-CN
+  lang: en
   # Place the comment box above the comments
   input_position: bottom
   # Load the comments lazily
