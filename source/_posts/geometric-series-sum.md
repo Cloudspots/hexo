@@ -2,8 +2,10 @@
 title: 等比数列求和公式的 +∞ 种理解方式
 date: 2024-12-19 13:04:54
 categories:
-  - K12 Study
-tags: []
+  - Mathematics
+tags:
+  - Mathematics
+  - Summation
 ---
 # $\#0.$ 任务简述
 

@@ -1,5 +1,5 @@
 ---
-title: test
+title: test $\LaTeX$
 date: 2026-07-19 19:44:08
 category:
   - Test

@@ -2,8 +2,12 @@
 title: 圆锥体积公式推导
 date: 2024-10-15 23:24:31
 categories:
-  - K12 Study
-tags: []
+  - Mathematics
+tags:
+  - Mathematics
+  - Calculus
+  - Summations
+updated: 2026-8-31 11:29:30
 ---
 众所周知 $\text{圆锥体积}=\dfrac{1}{3}\text{圆柱体积}$。
 
@@ -28,3 +32,9 @@ tags: []
 于是我们代入到上面推的公式 $\dfrac{\pi a^2h}{d^3}\sum\limits_{i=1}^{d}i^2$ 可得，结果为 $\dfrac{1}{3}\pi a^2h$，也就是三分之一个圆柱的体积。
 
 证毕！
+
+## upd on 2026/8/31
+
+（开学前一天）
+
+怎么，我，2024 年，10 月，15 日，独立发明了，微积分？

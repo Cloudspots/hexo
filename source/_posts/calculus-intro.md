@@ -2,8 +2,10 @@
 title: 微积分入门（真的很入门）
 date: 2024-8-7 16:22:32
 categories:
-  - K12 Study
-tags: []
+  - Mathematics
+tags:
+  - Mathematics
+  - Calculus
 updated: 2026-7-29 21:58:37
 ---
 > update：![](pA6Ojtx.png)

@@ -2,8 +2,10 @@
 title: 复数入门
 date: 2024-9-7 16:14:11
 categories:
-  - K12 Study
-tags: []
+  - Mathematics
+tags:
+  - Complex Number
+  - Mathematics
 ---
 > update on $2024/10/14$：修正了一些格式方面的问题，修了一个错别字（应该还有错别字），$i$ 使用了正体 $\mathrm i$。
 

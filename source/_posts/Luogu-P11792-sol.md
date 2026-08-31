@@ -1,5 +1,5 @@
 ---
-title: 题解：P11792 [JOI 2017 Final] JOIOI 王国 / Kingdom of JOIOI
+title: "题解：P11792 [JOI 2017 Final] JOIOI 王国 / Kingdom of JOIOI"
 tags:
   - Solution
   - Luogu P Problem Solution
