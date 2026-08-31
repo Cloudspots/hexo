@@ -7,6 +7,12 @@ tags:
   - test
 ---
 
+:::info[case -2]
+
+[$](http://$)
+
+:::
+
 :::info[case -1]
 
 :::warning[:::success[k]

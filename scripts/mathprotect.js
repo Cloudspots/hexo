@@ -1,4 +1,6 @@
 hexo.extend.filter.register('markdown-it:renderer', function (md) {
+  if (md.__mathProtectReady) return;
+  md.__mathProtectReady = true;
   const originalRender = md.render.bind(md)
 
   // Private-use Unicode characters.

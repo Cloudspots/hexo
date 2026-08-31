@@ -106,10 +106,8 @@ theme: next
 deploy:
   type: ''
 
-marked:
-  prependRoot: true
-  postAsset: true
-
+# （marked 配置段已移除：它属于未安装的 hexo-renderer-marked，无效；
+#   图片路径配置见下方 markdown.images）
 root: /hexo/
 
 markdown:

@@ -15,7 +15,7 @@ function renderTitle(md, title, env) {
 
 function newRenderer(md, str, env)
 {
-  let res = [];
+
   const lns = str.split('\n');
   const isend = (s) => { s = s.trim(); if(s.length >= 3 && s == ':'.repeat(s.length)) return s.length; else return -1; }
   const is_open = (s) => { let x = s.lastIndexOf("{open}"); return x != -1 && x > s.lastIndexOf("]"); };
@@ -56,13 +56,13 @@ function newRenderer(md, str, env)
     }
   }
   if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n'), env));
-  let arp = [];
+
   while(vkp.length > 1)
   {
     let g = newRenderer(md, vkp[vkp.length - 1].join('\n'), env);
     vkp.pop();
     let res = renderTitle(md, vals[vals.length-1].title, env);
-    vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type + (vals[vals.length-1].open ? " open" : "")}">
+    vkp[vkp.length - 1].push(`<details class="fold-${vals[vals.length-1].type}"${vals[vals.length-1].open ? " open" : ""}">
 <summary>${res}</summary>
 <div class="fold-content">${g}</div>
 </details>`);
@@ -72,6 +72,8 @@ function newRenderer(md, str, env)
 }
 
 hexo.extend.filter.register('markdown-it:renderer', function (md) {
+  if (md.__foldReady) return;
+  md.__foldReady = true;
   // console.log(1);
 
   md.block.ruler.before('fence', 'fold_block', function (state, startLine, endLine, silent)
@@ -93,6 +95,7 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
     {
       let ibf = state.src.slice(state.bMarks[i] + state.tShift[i], state.eMarks[i]);
       let p = isend(ibf);
+      contentLines.push(ibf);
       if(vals.length > 0 && p != -1 && p == vals[vals.length - 1].cnt)
       {
         if(vals.length == 1)
@@ -103,7 +106,6 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
         vals.pop();
         continue;
       }
-      contentLines.push(ibf);
       let r = getstart_f(ibf);
       if(r == null) continue;
       else vals.push({cnt: r[0], type: r[1], title: r[2]});
@@ -131,7 +133,7 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
 
 function newRenderer2(md, str, env)
 {
-  let res = [];
+
   const lns = str.split('\n');
   const isend = (s) => { s = s.trim(); if(s.length >= 3 && s == ':'.repeat(s.length)) return s.length; else return -1; }
   const getstart_f = (s) => { s = s.trim(); let x = s.indexOf('{'), y = s.lastIndexOf('}'); if(x == -1 || y == -1) return null; if(!s.startsWith(':::')) return null; for(let i=0;;i++) if(s[i] != ':') { if(s.substring(i, x) == 'align') return [i,s.substring(x+1,y)]; else return null; } };
@@ -171,7 +173,7 @@ ${g}
     }
   }
   if(tmp.length > 0) vkp[vkp.length - 1].push(md.render(tmp.join('\n'), env));
-  let arp = [];
+
   while(vkp.length > 1)
   {
     let g = newRenderer2(md, vkp[vkp.length - 1].join('\n'));
@@ -186,6 +188,8 @@ ${g}
 }
 
 hexo.extend.filter.register('markdown-it:renderer', function (md) {
+  if (md.__alignReady) return;
+  md.__alignReady = true;
   // console.log(2);
 
   md.block.ruler.after('fold_block', 'align', function (state, startLine, endLine, silent)
@@ -207,6 +211,7 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
     {
       let ibf = state.src.slice(state.bMarks[i] + state.tShift[i], state.eMarks[i]);
       let p = isend(ibf);
+      contentLines.push(ibf);
       if(vals.length > 0 && p != -1 && p == vals[vals.length - 1].cnt)
       {
         if(vals.length == 1)
@@ -217,7 +222,6 @@ hexo.extend.filter.register('markdown-it:renderer', function (md) {
         vals.pop();
         continue;
       }
-      contentLines.push(ibf);
       let r = getstart_f(ibf);
       if(r == null) continue;
       else vals.push({cnt: r[0], ali: r[1]});
