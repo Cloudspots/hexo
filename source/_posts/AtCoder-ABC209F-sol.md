@@ -1,8 +1,8 @@
 ---
 title: 题解：AT_abc209_f [ABC209F] Deforestation
 tags:
-  - Soluton
-  - Atcoder Problem Soluton
+  - Solution
+  - Atcoder Problem Solution
   - Dynamic Programming
   - Counting
   - Mathematics
