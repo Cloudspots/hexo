@@ -12,7 +12,7 @@ updated: 2026-07-17 18:58:41
 
 ---
 
-首先我们稍微思考一下，一次操作能够造成什么影响。容易发现如果我们假设 $\texttt (=\texttt0$ 且 $\texttt )=\texttt1$，那么就相当于原串异或括号串再异或 $M$，其中 $M=\texttt{101010\dots}$。
+首先我们稍微思考一下，一次操作能够造成什么影响。容易发现如果我们假设 $\texttt (=\texttt0$ 且 $\texttt )=\texttt1$，那么就相当于原串异或括号串再异或 $M$，其中 $M=\texttt{101010}\dots$。
 
 我们考虑一类特殊的字符串，满足 $\forall i\in [1,n),s_{2i}=s_{2i+1}$。显然，我们需要先关注 $s_1,s_{2n}$，这俩没有限制。
 
@@ -20,13 +20,13 @@ updated: 2026-07-17 18:58:41
 
 我们先考虑 $s_1=s_{2n}=\texttt1$。此时，我们注意到 $s\oplus M$ 是形如这样的串：
 
-$$ \texttt{0x}_1\overline{\texttt x_1}\texttt x_2\overline{\texttt x_2}\texttt x_3\overline{\texttt x_3}\texttt{\dots 1} $$
+$$ \texttt{0x}_1\overline{\texttt x_1}\texttt x_2\overline{\texttt x_2}\texttt x_3\overline{\texttt x_3}\dots\texttt{1} $$
 
 我们发现这个串一定是合法括号串！
 
 换句话说，对于这样的字符串，我们可以一次操作就清零！
 
-那么考虑 $s_1=s_{2n}=0$。我们注意到使用 $\texttt{010101\dots}$（对应括号串 $\texttt{()()()\dots}$）可以翻转整个字符串，转化为 $s_1=s_{2n}=1$ 的情况。
+那么考虑 $s_1=s_{2n}=0$。我们注意到使用 $\texttt{010101}\dots$（对应括号串 $\texttt{()()()}\dots$）可以翻转整个字符串，转化为 $s_1=s_{2n}=1$ 的情况。
 
 那么现在考虑无特殊性质。
 

@@ -187,5 +187,5 @@ update on 2025/1/15：
 
 鸣谢名单（不分先后）：
 
-- @[normalpcer](luogu://user/745184) 指出对于自然溢出为什么快的分析错误，已修改。
-- @[W1ngD1nGa5ter](luogu://user/521554) 提供关于“自然溢出啥事没有”的出处，已修改。
+- @[normalpcer](https://www.luogu.com.cn/user/745184) 指出对于自然溢出为什么快的分析错误，已修改。
+- @[W1ngD1nGa5ter](https://www.luogu.com.cn/user/521554) 提供关于“自然溢出啥事没有”的出处，已修改。

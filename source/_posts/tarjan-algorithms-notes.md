@@ -120,7 +120,7 @@ $$ \begin{array}{ll}
 13&\qquad\qquad\qquad \text{low}_u\gets\min(\text{low}_u,\text{dfn}_v)
 \end{array} $$
 
-代码好写，但是伪代码实在太难写了（指 $\KaTeX$）！
+代码好写，但是伪代码实在太难写了（指 $\text{KaTeX}$）！
 
 ## 重边
 

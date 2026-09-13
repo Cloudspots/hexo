@@ -16,7 +16,11 @@ math:
   engine: mathjax
   # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
   mathjax:
-    enable: true
+    # 关掉主题自带的 MathJax 加载：本站由 scripts/loadmathjax.js 接管。
+    # 开着的话，NexT 的 mathjax.js 会因为 window.MathJax 已被定义而走 else 分支
+    # （typeof MathJax === 'undefined' 为假），执行 MathJax.startup.document.state(0)，
+    # 在 v3 bundle 尚未就绪时直接抛 TypeError；而且它指向的是 MathJax 4.x，与本站的 v3 是两个大版本。
+    enable: false
     per_page: false
     every_page: true
     # See: https://mhchem.github.io/MathJax-mhchem/

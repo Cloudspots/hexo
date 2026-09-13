@@ -1,8 +1,8 @@
 ---
 title: 题解：P6805 [CEOI 2020] 春季大扫除
 tags:
-  - Soluton
-  - Luogu Problem Solution
+  - Solution
+  - Luogu P Problem Solution
   - Tree
   - Segment Tree
   - Heavy-light Decomposition

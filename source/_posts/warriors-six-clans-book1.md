@@ -47,7 +47,7 @@ tags: []
 
 ## 地点
 
-$\text{\color{red}咕\color{pink}咕\color{white}咕\color{pink}咕\color{red}咕}$。
+$\textcolor{red}{咕}\textcolor{pink}{咕}\textcolor{white}{咕}\textcolor{pink}{咕}\textcolor{red}{咕}$。
 
 ## [武士守则](https://www.luogu.com.cn/paste/viheb5g1)
 

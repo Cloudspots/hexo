@@ -232,7 +232,7 @@ if(__builtin_expect(x == 55, true)) printf("x is 55\n"); // __builtin_expect(a, 
 else printf("x isn't 55.\n");
 ```
 
-这没有改变语义，但是会改变 CPU 的分支预测，同时促进编译器冷热代码分离（而为什么这比较快，因为长跳转比较慢）。参考[此成功案例](https://www.luogu.com.cn/record/126396155)（注意看 #2，时间限制是 $500\mathrm{ms}$）。~~不过这样干还不如 v 我 $\text{\sout{50}}$ 增加 rp，非常容易被评测机波动干废。~~ 对于一些情况很有用。可以让你稳定卡进 AC！
+这没有改变语义，但是会改变 CPU 的分支预测，同时促进编译器冷热代码分离（而为什么这比较快，因为长跳转比较慢）。参考[此成功案例](https://www.luogu.com.cn/record/126396155)（注意看 #2，时间限制是 $500\mathrm{ms}$）。~~不过这样干还不如 v 我 $50$ 增加 rp，非常容易被评测机波动干废。~~ 对于一些情况很有用。可以让你稳定卡进 AC！
 
 :::info[歌词]
 
@@ -274,7 +274,7 @@ Barrett 约简也算是一种强度削减，但是如果模数不是常数可能
 
 ### 额……lambda？
 
-一些函数改写为 `lambda` 函数相当于加了 `static` 关键字，也就是没有内联语义的 `inline` 关键字。**不如 v 我 $\bm{50}$**。
+一些函数改写为 `lambda` 函数相当于加了 `static` 关键字，也就是没有内联语义的 `inline` 关键字。**不如 v 我 $\boldsymbol{50}$**。
 
 ### 指令集优化
 
@@ -521,6 +521,5 @@ CF489F。
 - [题解：P10815 【模板】快速读入](https://www.luogu.com.cn/article/awzq5g4d)。
 - [godbolt](https://godbolt.org/)。
 - [OI-wiki](https://oi-wiki.org/lang/optimizations/)。
-- [C++ inline 与内联优化
-](https://www.luogu.com.cn/article/7tx7d47i)。
-- [cppreference](htttps://en.cppreference.com/)。
+- [C++ inline 与内联优化](https://www.luogu.com.cn/article/7tx7d47i)。
+- [cppreference](https://en.cppreference.com/)。

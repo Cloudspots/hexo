@@ -15,7 +15,7 @@ tags:
 
 $n=2k$，则 $a^n-b^n=(a^k)^2-(b^k)^2=(a^k-b^k)(a^k+b^k)$。那么左边可以递归下去，右边呢？
 
-如果 $k$ 是偶数，由于 $a,b$ 都是奇数，他们的平方模四必然余 $1$，加起来余 $2$，所以右边的 $\mathrm{lowbit}$ 必然为 $2$。而如果 $k$ 是奇数，有因式分解但是我不想打 $\KaTeX$ 了，反正是 $(a+b)$ 乘一个奇数，显然其 $\mathrm{lowbit}$ 就是 $\mathrm{lowbit}(a+b)$。
+如果 $k$ 是偶数，由于 $a,b$ 都是奇数，他们的平方模四必然余 $1$，加起来余 $2$，所以右边的 $\mathrm{lowbit}$ 必然为 $2$。而如果 $k$ 是奇数，有因式分解但是我不想打 $\text{KaTeX}$ 了，反正是 $(a+b)$ 乘一个奇数，显然其 $\mathrm{lowbit}$ 就是 $\mathrm{lowbit}(a+b)$。
 
 总共递归 $\log_2\left(\mathrm{lowbit}\left(\dfrac{n}{2}\right)\right)$ 层，除了最后一层之外对于答案的贡献均只为 $2$，而最后一层是 $\newcommand{\lowbit}{\mathrm{lowbit}}\lowbit(a-b)\lowbit(a+b) = \lowbit(a^2-b^2)$，故答案为 $\newcommand{\lowbit}{\mathrm{lowbit}}\lowbit(a^2-b^2)(\lowbit(n)-1)$。
 

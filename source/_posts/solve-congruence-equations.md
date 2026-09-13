@@ -8,7 +8,7 @@ tags:
 updated: 2026-07-30 11:44:45
 ---
 
-upd on 2026/7/30：修正 $\KaTeX$。
+upd on 2026/7/30：修正 $\text{KaTeX}$。
 
 > $\lceil$ 今有物不知其数，三三数之余二；五五数之余三；七七数之余二。问物几何？$\rfloor$\
 \
@@ -20,7 +20,7 @@ $\lceil$ 三人同行七十稀，五树梅花廿一枝，七子团圆月正半�
 
 $$\def \threety#1#2#3{ \begin{cases} x \equiv #1 \pmod 3 \\x \equiv #2 \pmod 5 \\x \equiv #3 \pmod 7 \end{cases} } \threety{2}{3}{2}$$
 
-你别说，你还真别说，$\KaTeX$ 的 $\operatorname{\backslash def}$ 还挺好用（详见源码）
+你别说，你还真别说，$\text{KaTeX}$ 的 $\operatorname{\backslash def}$ 还挺好用（详见源码）
 
 # 解法 #1
 

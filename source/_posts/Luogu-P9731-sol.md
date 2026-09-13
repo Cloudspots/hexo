@@ -36,7 +36,7 @@ updated: 2026-07-28 15:46:16
 
 假设某个颜色左半部分出现次数为 $a_{1\dots n}$，右半部分为 $b_{1\dots n}$。我们有条件 $\forall i,j,\lvert a_i-a_j\rvert \le 1,\lvert b_i-b_j\rvert\le 1$，同时 $\lvert \sum a - \sum b\rvert \le 1$。
 
-那么此时如果有 $\exist i,j,a_i-b_j\ge 2$（如果是 $b_j-a_i\ge 2$ 可以交换 $a,b$），那么就有 $\min a\ge a_i-1,\max b\le b_j-1$，但是 $a_i-1\ge b_j-1$，所以对于任意 $i,j$ 都有 $a_i\ge b_j$。
+那么此时如果有 $\exists i,j,a_i-b_j\ge 2$（如果是 $b_j-a_i\ge 2$ 可以交换 $a,b$），那么就有 $\min a\ge a_i-1,\max b\le b_j-1$，但是 $a_i-1\ge b_j-1$，所以对于任意 $i,j$ 都有 $a_i\ge b_j$。
 
 然后你重排一下 $b$ 使原本的 $i,j$ 落到 $1,1$ 的位置，也就是 $a_1-b_1\ge 2$
 

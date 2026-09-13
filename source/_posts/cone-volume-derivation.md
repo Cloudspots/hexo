@@ -6,7 +6,7 @@ categories:
 tags:
   - Mathematics
   - Calculus
-  - Summations
+  - Summation
 updated: 2026-8-31 11:29:30
 ---
 众所周知 $\text{圆锥体积}=\dfrac{1}{3}\text{圆柱体积}$。

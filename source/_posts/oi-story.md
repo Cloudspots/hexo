@@ -21,13 +21,13 @@ updated: 2026-07-29 11:00:00
 
 [$\Huge{\text{新鲜出炉的订阅计划}}$](/hexo/2024/11/28/oi-road-subscription-plan/)
 
-[$\huge{\text{更多信息\&人物报名戳这里}}$](/hexo/2024/12/05/oi-road-science/)
+[$\huge{\text{更多信息&人物报名戳这里}}$](/hexo/2024/12/05/oi-road-science/)
 
 准备写至少两部。已经想好第二部怎么写了，现在想怎么承接。如果需要剧透的私信。
 
-tip:从第六章开始都是作者在本地编辑器写的，编辑器没有渲染，所以 Markdown/$\KaTeX$ 炸了提醒我一下。
+tip:从第六章开始都是作者在本地编辑器写的，编辑器没有渲染，所以 Markdown/$\text{KaTeX}$ 炸了提醒我一下。
 
-upd on 2026/7/29：修正了不规范的 $\KaTeX$，适配 Hexo 链接。
+upd on 2026/7/29：修正了不规范的 $\text{KaTeX}$，适配 Hexo 链接。
 
 ## 第 $1$ 部
 
@@ -59,7 +59,7 @@ $\lceil \text{就是一只}\lceil \text{红题} \rfloor\text{，没事，你只�
 
 > $\text{Visual Studio}$（指现实中的某个 IDE）疑似有内存泄漏，每次开久了都会占用我几个 $\mathrm{GB}$ 的内存啊啊啊！
 
-小 $\lfloor$ 戳了一下 $\lceil \text{创建新项目} \rfloor$，然后随手点了最上面的 $\lceil \text{空项目}\rfloor$，进入了 $\lceil \text{配置新项目}\rfloor$ 页面，在 $\lceil \text{项目名称} \rfloor$ 一空中填入了 $\alpha$，在 $\lceil \text{位置} \rfloor$ 中填入了 $\Phi\text{:/}\footnotesize{\lfloor}\normalsize\text{/}1^{\text{st}}$。（$\KaTeX$ 巨长:`$\Phi\text{:/}\footnotesize{\lfloor}\normalsize\text{/}1^{\text{st}}$`。）
+小 $\lfloor$ 戳了一下 $\lceil \text{创建新项目} \rfloor$，然后随手点了最上面的 $\lceil \text{空项目}\rfloor$，进入了 $\lceil \text{配置新项目}\rfloor$ 页面，在 $\lceil \text{项目名称} \rfloor$ 一空中填入了 $\alpha$，在 $\lceil \text{位置} \rfloor$ 中填入了 $\Phi\text{:/}\scriptsize{\lfloor}\normalsize\text{/}1^{\text{st}}$。（$\text{KaTeX}$ 巨长:`$\Phi\text{:/}\scriptsize{\lfloor}\normalsize\text{/}1^{\text{st}}$`。）
 
 过了一会儿，$\text{devenv}$ 提示 $\lceil \text{项目创建完毕} \rfloor$。
 
@@ -127,7 +127,7 @@ $\lceil \text{你是怎么发现这只}\lceil \text{绿题} \rfloor \text{的啊
 
 $\lceil \text{哦，有一天我 }\color{#52c41a}\mathbb{AC}\color{#404040}\text{ 了} \lceil\text{万能的 OIH 搜索} \rfloor \text{这只} \lceil \text{绿题} \rfloor\text{，然后发现爆出了一个}\lceil \text{洛谷题库搜索} \\ \rfloor\text{，就可以任意搜索题目了。}\rfloor$[^6] 小 $\rfloor$ 说。
 
-$\lceil \text{那么} \dots \text{我先走了。} \rfloor$ 小 $\rfloor$ 说完，便飞走了，空中出现一个 $\stackrel{\texttt{<unistd.h>}}{\text{\huge{read}}}$[^7]。
+$\lceil \text{那么} \dots \text{我先走了。} \rfloor$ 小 $\rfloor$ 说完，便飞走了，空中出现一个 $\stackrel{\texttt{<unistd.h>}}{\huge\text{read}}$[^7]。
 
 $\lceil \text{他是怎么飞走的？} \rfloor$ 小 $\lfloor$ 问。
 
@@ -148,7 +148,7 @@ $\lceil \text{红题} \rfloor$：
 1. $\text{B2118}$
 1. $\text{B2024}$
 1. $\text{B2025}$
-1. $\text{AT\_abc370\_a}$
+1. $\text{AT_abc370_a}$
 1. $\text{P5733}$
 
 $\lceil \text{橙题} \rfloor$：
@@ -271,10 +271,10 @@ $\lceil \text{是的。} \rfloor$ 小 $\mathbb V$ 说。小 $\lfloor$ 问道：$
 ## 注解
 
 [^1]: 小 $\text{L(ionblaze)}$，但是 $\text{L}$ 和 $\lfloor$ 很像，所以就是小 $\lfloor$。  
-[^2]: @[Han_Si_Ying](luogu://user/1334245) 神犇的的[代码危机 || 洛谷12周年限定 - 人物列表及广告](https://www.luogu.com/article/6mbkhb7u)中的柯爱喵，她的小说正文是[代码危机 || 洛谷12周年限定](https://www.luogu.com/article/fhbti4q7)。  
+[^2]: @[Han_Si_Ying](https://www.luogu.com.cn/user/1334245) 神犇的的[代码危机 || 洛谷12周年限定 - 人物列表及广告](https://www.luogu.com/article/6mbkhb7u)中的柯爱喵，她的小说正文是[代码危机 || 洛谷12周年限定](https://www.luogu.com/article/fhbti4q7)。  
 [^3]: $\lceil$ 和 $\lfloor$ 很像，寓意着两只猫的友谊地久天长。刮开后面有剧透。$\color{white}{\text{计划后面还有小 }\rfloor\text{ 和小 }\rceil \text{。}}$  
 [^4]: 为什么简称 $\text{devenv}$ 呢，因为 $\text{Visual Studio}$ 主程序就叫 $\text{devenv.exe}$。应该是 $\text{develop environment}$。  
 [^5]: 同[^3]，剧透的前一部分。  
-[^6]: 警示后人：$\KaTeX$ 默认颜色是 $\texttt{\#404040}$，而不是 $\backslash\texttt{color\{black\}}=\texttt{\#000000}$， 颜色显示为 $\color{#404040}\text{qwq}\color{#000000}\text{qwq}$。  
+[^6]: 警示后人：$\text{KaTeX}$ 默认颜色是 `#404040`，而不是 `\color{black}` = `#000000`， 颜色显示为 $\color{#404040}\text{qwq}\color{#000000}\text{qwq}$。  
 [^7]: 致敬传奇快读（缓存大小选择得当的时候比 `getchar_unlocked` 要快 $2 \sim 3$ 倍），可惜小 $\lfloor$ 和小 $\lceil$ 不知道。
 [^8]: 左和右均是相对小 $\lfloor$ 来说的。也就是，小 $\lfloor$ 的左眼是绿色，右眼是红色。

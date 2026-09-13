@@ -1,8 +1,8 @@
 ---
 title: 题解：P17271 [eJOI 2026] Reconstruct
 tags:
-  - Solutoin
-  - Luogu Problem Solution
+  - Solution
+  - Luogu P Problem Solution
   - Interactive
   - Tree
 categories:

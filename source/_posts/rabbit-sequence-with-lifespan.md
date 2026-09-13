@@ -13,7 +13,7 @@ tags: []
 
 用一些 ~~玄学~~ 构造方法可以得出，变换后的向量刚好为变换前的向量乘上 $\begin{bmatrix} 0 & 1 \\ 1 & 1 \end{bmatrix}$，第 $n$ 项即为 $\begin{bmatrix} 0 & 1 \\ 1 & 1 \end{bmatrix}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix}$，因为矩阵相乘具有结合律，所以可以用矩阵快速幂求出左边的 $\begin{bmatrix} 0 & 1 \\ 1 & 1 \end{bmatrix}^n $。
 
-现在，@[NightTide](user/547908) 巨佬说了：
+现在，@[NightTide](https://www.luogu.com.cn/user/547908) 巨佬说了：
 
 > 但是“兔子永生”这一点始终令人疑惑。假如我们加上一个兔子只能存活 m 年的限制条件，斐波那契数列会变成什么样子呢。
 

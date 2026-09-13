@@ -28,7 +28,7 @@ $$p_{n9}\left(x,y,l\right)=\left[\operatorname{polygon}\left(\left(x,y+l\right),
 
 但是这样每一个数字还是要手动写 $p_{nk}$，不方便。
 
-注意到每个数字最多用 $5$ 条线，所以先对其进行一些神奇的操作，变成：（这里不加 $\KaTeX$ 了）
+注意到每个数字最多用 $5$ 条线，所以先对其进行一些神奇的操作，变成：（这里不加 $\text{KaTeX}$ 了）
 
 ```katex
 p_{n0} \left( x , y , l \right)= \left[ \operatorname{polygon} \left( \left( x , y \right) , \left( x , y+2l \right) \right) , \operatorname{polygon} \left( \left( x , y \right) , \left( x+l , y \right) \right) , \operatorname{polygon} \left( \left( x+l , y \right) , \left( x+l , y+2l \right) \right) , \operatorname{polygon} \left( \left( x , y+2l \right) , \left( x+l , y+2l \right) \right) , \operatorname{polygon} \left( \left( x , y+2l \right) , \left( x , y+2l \right) \right) \right]

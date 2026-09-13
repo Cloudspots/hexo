@@ -9,7 +9,9 @@ hexo.extend.injector.register(
           processEscapes: true
         },
         options: {
-          skipHtmlTypes: 'script|noscript|style|textarea|pre|code|annotation|annotation-xml'
+          // 正确名字是 skipHtmlTags（数组），默认值就是下面这一串；
+          // 原来写的 skipHtmlTypes 是无效选项，MathJax 会在控制台报 Invalid option。
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'annotation', 'annotation-xml']
         }
       };
 

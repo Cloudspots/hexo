@@ -67,7 +67,7 @@ $$\begin{aligned}
 \text{Right: }&\begin{matrix}0&3&4&4&6\\\uparrow\end{matrix}
 \end{aligned}$$
 
-插播一条消息：此处作者写 $\KaTeX\kern-25pt\LaTeX$（我受够了 $\LaTeX$ 和 $\KaTeX$ 的争论，所以准备折中一下（延伸阅读：数组下标从 $0$ 还是 $1$ 开始？我的回答是 $0.5$ —— Notepad++[^5]）（延伸阅读：离向心力 ——xkcd[^6]））手都快废了，大家快点个赞鼓励一下。
+插播一条消息：此处作者写 $\text{KaTeX}\kern-25pt\LaTeX$（我受够了 $\LaTeX$ 和 $\text{KaTeX}$ 的争论，所以准备折中一下（延伸阅读：数组下标从 $0$ 还是 $1$ 开始？我的回答是 $0.5$ —— Notepad++[^5]）（延伸阅读：离向心力 ——xkcd[^6]））手都快废了，大家快点个赞鼓励一下。
 
 [^5]: 在 Notepad++ 中新建一个空文件，输入 `random` 并选中，然后按 F1，就会随机出现一句有意思的话，其中一句翻译成中文大概就是这个意思。这些话可以在 Notepad++ 源码中找到。
 
@@ -134,7 +134,7 @@ $$ \begin{array}{ll}
 14&\textbf{return}\text{ res}\\
 \end{array} $$
 
-$\KaTeX$ 伪代码比 C++ 代码长，谴责！
+$\text{KaTeX}$ 伪代码比 C++ 代码长，谴责！
 
 甚至还把 Markdown 第 $114$ 行占掉了，谴责！
 

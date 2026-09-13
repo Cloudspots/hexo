@@ -12,7 +12,7 @@ updated: 2025-07-29 11:25:30
 
 为了防止误点进来，这里插入一堆空白。
 
-$\raisebox{250pt}{}$
+$\rule{0pt}{250pt}$
 
 # 第零关：犇犇入口
 
@@ -24,17 +24,17 @@ $\raisebox{250pt}{}$
 
 > LionBlaze 说：然后 LionBlaze 在做完入口之后感觉这条犇犇太难找了，并且 benben.sbs 因为不知名玄学原因没有保存。所以重发了一遍。
 
-注意到犇犇中含有关键词“解密”，于是上 benben.sbs [查询](https://benben.sbs/search?keyword=%E8%A7%A3%E5%AF%86&senders=911054)。发现了[结果](https://benben.sbs/feed/5231124)。
+注意到犇犇中含有关键词“解密”，于是上 benben.sbs 查询。发现了结果（原帖已被删除，链接已失效）。
 
 # 第一关：帖子入口
 
-注意到点击链接后进入了一个帖子页面。上 lglg.top [查看](https://lglg.top/1057907)。
+注意到点击链接后进入了一个帖子页面。上 lglg.top 查看（该帖已失效）。
 
 > ~~LionBlaze 说：最初做这个解密的时候洛谷讨论区还在。当时更坑，原因见下。~~
 >
 > upd on 2026/07/29: 讨论区早就活了。
 
-注意到第一条回复是消息“玄关”，但是 Ctrl+F 搜索“玄关”却并没有结果。F12 发现，玄关二字之间存在一个 $\KaTeX$，源码为 `%naisu0ac`。其中，`%` 是 $\KaTeX$ 注释，故没有显示。
+注意到第一条回复是消息“玄关”，但是 Ctrl+F 搜索“玄关”却并没有结果。F12 发现，玄关二字之间存在一个 $\text{KaTeX}$，源码为 `%naisu0ac`。其中，`%` 是 $\text{KaTeX}$ 注释，故没有显示。
 
 显然是[云剪贴板](https://www.luogu.com/paste/naisu0ac) ID。
 

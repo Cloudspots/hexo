@@ -111,6 +111,8 @@ deploy:
 root: /hexo/
 
 markdown:
+  plugins:
+    - markdown-it-footnote
   render:
     html: true
     xhtmlOut: false

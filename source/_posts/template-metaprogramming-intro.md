@@ -109,7 +109,7 @@ vector<T> Dijkstra(const vector<vector<pair<int, T>>>& web, int s)
 
 ## 数值模板
 
-感谢 @[Grammar__hbw](luogu://user/856004) 提供的例子。
+感谢 @[Grammar__hbw](https://www.luogu.com.cn/user/856004) 提供的例子。
 
 众所周知快速幂是非常简单的东西，我们可以这么写：
 
@@ -213,7 +213,7 @@ class is114514<114514> { public: static constexpr bool value = true; };
 
 这是怎么做到的呢？
 
-~~首先，动用大脑这一神奇工具，得出“很臭”的定义是 $\text{\sout{114514}}$。~~
+~~首先，动用大脑这一神奇工具，得出“很臭”的定义是 $114514$。~~
 
 在有多个模板匹配时，编译器会使用最容易匹配的，也就是模板参数最少的，当 $x=114514$ 时，明显第二个参数更少（没有参数），当 $x\not =114514$ 时，虽然第二个没有参数，但是不可以匹配，此时只能退而求其次用第一个。
 

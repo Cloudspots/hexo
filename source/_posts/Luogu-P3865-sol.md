@@ -90,7 +90,7 @@ unsigned qwq123(unsigned x)
 
 ST 表（又名稀疏表，Sparse Table），是一种支持静态 RMQ 问题的数据结构。
 
-> 什么是 RMQ 问题？是 Range Maximum/Minimum Query 的缩写，表示区间最值。其实，ST 表不仅可以处理 RMQ 问题，还可以处理所有满足可重复贡献且满足结合律的问题（没错，这一段就是从 [OI-wiki](https://oi-wiki.org/ds/sparse-table/) 上抄的）。设操作为 $f(x,y)$，可重复贡献是指 $f(x,x)=x$，而满足结合律是指 $f(x,f(y,z))=f(f(x,y),z)$。**下面我们都假设操作为 $\bm{\max}$ 操作。**
+> 什么是 RMQ 问题？是 Range Maximum/Minimum Query 的缩写，表示区间最值。其实，ST 表不仅可以处理 RMQ 问题，还可以处理所有满足可重复贡献且满足结合律的问题（没错，这一段就是从 [OI-wiki](https://oi-wiki.org/ds/sparse-table/) 上抄的）。设操作为 $f(x,y)$，可重复贡献是指 $f(x,x)=x$，而满足结合律是指 $f(x,f(y,z))=f(f(x,y),z)$。**下面我们都假设操作为 $\boldsymbol{\max}$ 操作。**
 
 它其实是一个二维数组。通常情况下，我们使用 $f_{i,j}$ 表示 $\displaystyle\max_{k=i}^{i+2^j-1}a_k$，但是事实证明这种表示方法并不是很好。
 

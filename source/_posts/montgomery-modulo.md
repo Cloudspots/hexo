@@ -1,5 +1,5 @@
 ---
-title: montgomery-modulo
+title: Montgomery 模法！
 tags:
   - Modulo Algorithm
   - Optimization
@@ -12,11 +12,11 @@ updated: 2026-07-22 19:58:33
 
 主播主播，你的时间复杂度是优秀的，但是你被卡常了！
 
-主播主播，你的 Barrett 约简很快速，computers 也很 fast，但是我又缩小了实现，所以你必须用 SIMD；Barrett 需要 `__int128`（或 `unsigned __int128`），难以 SIMD！
+主播主播，你的 Barrett 约简很快速，computers 也很 fast，但是我又缩小了时限，所以你必须用 SIMD；Barrett 需要 `__int128`（或 `unsigned __int128`），难以 SIMD！
 
 ---
 
-Montgomery 取模，在 $64$ 位整数范围内完成 $\Z_p$（模 $p$ 整数环；通俗地讲，一切运算均在模 $p$ 意义下进行的整数环。不要求 $p$ 是质数）。在 OI 中，通常 $p$ 需要是奇数（大多数情况下模数都是质数，所以只需要或不需要特判 $p=2$）。
+Montgomery 取模，在 $64$ 位整数范围内完成 $\mathbb{Z}_p$（模 $p$ 整数环；通俗地讲，一切运算均在模 $p$ 意义下进行的整数环。不要求 $p$ 是质数）。在 OI 中，通常 $p$ 需要是奇数（大多数情况下模数都是质数，所以只需要或不需要特判 $p=2$）。
 
 其原理是，构造一个 Montgomery 空间，包含一个参数 $R$ 足够大（通常 $R>p$ 即可。这里“足够大”是指首先 $R>p$，然后对于任意需要取模的数字 $x$，$x\le Rp$），$R$ 与 $p$ 互质，满足除 $R$ 和对 $R$ 取模可以快速进行（通常 $R$ 取 $2$ 的幂，比如使用 $2^{32}$ 自然溢出）。
 

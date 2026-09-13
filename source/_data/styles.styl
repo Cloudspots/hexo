@@ -270,3 +270,37 @@
 .post-body table.markdown-table.tuack .table-bottom-cell {
   border-bottom: 3px solid currentColor !important;
 }
+
+
+/* =========================================================
+ * Footnotes (markdown-it-footnote)
+ * ========================================================= */
+
+/* 分隔线只用插件自带的那条 <hr class="footnotes-sep">。
+   别再给 .footnotes 加 border-top —— 两者会叠成两条线。 */
+.post-body hr.footnotes-sep
+  margin 2em 0 0.6em
+  height 0
+  border 0
+  border-top 1px solid var(--fold-color, #4c9aff)
+
+.post-body .footnotes
+  font-size 0.9em
+
+.post-body .footnotes ol.footnotes-list
+  padding-left 1.6em
+
+.post-body .footnotes li.footnote-item
+  margin 0.35em 0
+
+.post-body .footnotes .footnote-backref
+  margin-left 0.35em
+  text-decoration none
+  opacity 0.55
+
+.post-body .footnotes .footnote-backref:hover
+  opacity 1
+
+.post-body sup.footnote-ref > a
+  text-decoration none
+  padding 0 0.15em

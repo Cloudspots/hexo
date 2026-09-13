@@ -13,13 +13,13 @@ tags:
 
 ## 方法 $1$（二项式反演）
 
-我们先不妨钦定交集是 $[1,k]\cap \N$，即 $\{1,2,3,\dots,k\}$。
+我们先不妨钦定交集是 $[1,k]\cap \mathbb{N}$，即 $\{1,2,3,\dots,k\}$。
 
 然后我们发现在 $2^n$ 个子集中，有 $2^{n-k}$ 个子集可以选。我们不能都不选，所以一共有 $2^{2^{n-k}}-1$ 种选法。
 
 所以我们就得到了式子 $\dbinom{n}{k}(2^{2^{n-k}}-1)$，前面的 $\dbinom{n}{k}$ 是因为实际上并出来的可以是任意大小为 $k$ 的集合，一共有 $\dbinom{n}{k}$ 个这样的集合。
 
-这个显然不对。这个只能保证并出来的是 $[1,k]\cap \N$ 的超集，比如可能并出来 $[1,k+1]\cap \N$。
+这个显然不对。这个只能保证并出来的是 $[1,k]\cap \mathbb{N}$ 的超集，比如可能并出来 $[1,k+1]\cap \mathbb{N}$。
 
 但是这个给了我们启发。做有些题目的时候也是限定某个值 $=k$，我们不小心求出了 $\ge k$，此时直接用 $\ge k$ 的减掉 $\ge k+1$ 的即可。
 
@@ -27,7 +27,7 @@ tags:
 
 还是不对。
 
-究其原因是因为，我们减掉的不够多。比如我们并出了一个 $[1,k+1]\cap \N$，此时它会在 $g(k)$ 的计算中被重复计算 $k+1$ 次（分别是 $([1,k+1]\cap N)\backslash \{1\},([1,k+1]\cap N)\backslash \{2\},([1,k+1]\cap N)\backslash \{3\},\dots,([1,k+1]\cap N)\backslash \{k+1\}$（也就是 $[1,k+1]\cap N$ 分别去掉 $1,2,3,\dots,k+1$ 的结果）。但是我们只减掉了一次。
+究其原因是因为，我们减掉的不够多。比如我们并出了一个 $[1,k+1]\cap \mathbb{N}$，此时它会在 $g(k)$ 的计算中被重复计算 $k+1$ 次（分别是 $([1,k+1]\cap N)\backslash \{1\},([1,k+1]\cap N)\backslash \{2\},([1,k+1]\cap N)\backslash \{3\},\dots,([1,k+1]\cap N)\backslash \{k+1\}$（也就是 $[1,k+1]\cap N$ 分别去掉 $1,2,3,\dots,k+1$ 的结果）。但是我们只减掉了一次。
 
 那正确的式子应该是 $g(k)-(k+1)g(k+1)$？
 
@@ -71,7 +71,7 @@ $$\begin{aligned}\sum_{i=k}^j (-1)^{j-i}\dbinom{j-k}{i-k}&=\sum_{i=k}^j(-1)^{(j-
 
 我们不妨还是设 $f(k)$ 为答案，而 $g(S)$ 为选取的集合的交集恰好为 $S$ 的方案数。
 
-容易发现 $f(k)=\displaystyle\sum_{\lvert S\rvert=k}g(S)$。或者，$f(k)=\dbinom{n}{k}g([1,k]\cap \N)$。
+容易发现 $f(k)=\displaystyle\sum_{\lvert S\rvert=k}g(S)$。或者，$f(k)=\dbinom{n}{k}g([1,k]\cap \mathbb{N})$。
 
 容易写出一个错误的式子，$g(S)=2^{2^{n-\lvert S\rvert}}-1$。究其原因是计算了交集为 $S$ 的超集的选取方式。
 
@@ -137,7 +137,7 @@ $$ g(n,m)=\sum_{\substack{i\le n\\j\le m}} (-1)^{n+m-i-j} \dbinom{n}{i} \dbinom{
 
 $$ \begin{aligned}&f(x_1,x_2,\dots,x_k)=\sum_{\substack{y_1\le x_1\\y_2\le x_2\\y_3\le x_3\\[-11px]\\\vdots\\y_k\le x_k}}  g(y_1,y_2,\dots,y_k) \prod_{1\le i\le k} \dbinom{x_i}{y_i} \\\iff& g(x_1,x_2,\dots,x_k)=\sum_{\substack{y_1\le x_1\\y_2\le x_2\\y_3\le x_3\\[-11px]\\\vdots\\y_k\le x_k}} (-1)^{\sum\limits_{1\le i\le k}x_i - \sum\limits_{1\le i\le k}y_i}f(y_1,y_2,\dots,y_k) \prod_{1\le i\le k} \dbinom{x_i}{y_i} \end{aligned}\tag 7$$
 
-证明比上面这个式子的 $\KaTeX$ 还要简单，略去。
+证明比上面这个式子的 $\text{KaTeX}$ 还要简单，略去。
 
 ## 代码实现
 

@@ -26,7 +26,7 @@ $$\begin{aligned}
 
 显然，最右边的 $\left\lfloor \dfrac{b}{n} \right\rfloor$ 是一个常数，而 $b \bmod n$ 也是一个常数。
 
-**注意：我在验证式子有没有推错的时候用了 `(x-1)/n` 来计算 $\bm{\left\lfloor\dfrac{x-1}{n}\right\rfloor}$，结果寄了（可以想想为什么）。**
+**注意：我在验证式子有没有推错的时候用了 `(x-1)/n` 来计算 $\boldsymbol{\left\lfloor\dfrac{x-1}{n}\right\rfloor}$，结果寄了（可以想想为什么）。**
 
 我们采用换元法，令 $z = x-1$，则原式转化为 $\left(\left\lfloor\dfrac{z+(1+b \bmod n)}{n}\right\rfloor - \left\lfloor\dfrac{z}{n}\right\rfloor\right) + \left\lfloor\dfrac{b}{n}\right\rfloor$，$z$ 满足 $-1 \le z < a$。
 

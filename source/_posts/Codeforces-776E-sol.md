@@ -7,7 +7,7 @@ tags:
   - Solution
   - Codeforces Problem Solution
 ---
-**这题目前中文翻译疑似不太有素质，答案要对 $\bm{10^9+7}$ 取模**。
+**这题目前中文翻译疑似不太有素质，答案要对 $\boldsymbol{10^9+7}$ 取模**。
 
 容易发现 $f(x)=\varphi(x)$，也就是 $[1,x]$ 中与 $x$ 互质的元素个数。
 

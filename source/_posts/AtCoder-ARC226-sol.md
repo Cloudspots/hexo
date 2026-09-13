@@ -1,9 +1,10 @@
 ---
 title: "ARC226 A&B&C 题解"
 tags:
-  - null
+  - Solution
+  - Atcoder Problem Solution
 categories:
-  - null
+  - Solution
 date: 2026-08-09 21:56:30
 updated: 2026-08-09 21:56:30
 ---

@@ -9,7 +9,7 @@ tags: []
 
 ## 简介
 
-注意：因为输出是 Markdown 所以你需要 Markdown 渲染。这很简单，比如 VSCode 的 Markdownlint 插件就可以，VS 好像是原生就支持但是貌似不能直接渲染 $\KaTeX$。同时你还需要能够执行 Python 代码。
+注意：因为输出是 Markdown 所以你需要 Markdown 渲染。这很简单，比如 VSCode 的 Markdownlint 插件就可以，VS 好像是原生就支持但是貌似不能直接渲染 $\text{KaTeX}$。同时你还需要能够执行 Python 代码。
 
 由[洛谷开放平台的评测能力页面](https://docs.lgapi.cn/open/judge/)，我们得知可以在 <https://cdn.luogu.com.cn/problemset-open/latest.ndjson.gz> 下载洛谷题库数据。解压后是 JSON 格式，所以我写了一个 Python 程序，将 JSON 转换为 Markdown，这样就可以在本地看洛谷的题了（没有 RMJ 的，但是有 P&B 题库的）。
 
