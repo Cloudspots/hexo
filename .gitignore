@@ -6,3 +6,6 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+
+# hexo sync_luogu 缓存的洛谷 Cookie（含 _uid / __client_id，千万别提交）
+.cache/
