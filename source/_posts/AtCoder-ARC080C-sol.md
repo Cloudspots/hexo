@@ -1,7 +1,7 @@
 ---
 title: 题解：AT_arc080_c [ARC080E] Young Maids
 date: 2026-10-05 10:22:50
-updated: 2026-10-07 21:52:43
+updated: 2026-10-09 21:20:41
 categories:
   - Solution
 tags:
@@ -29,6 +29,15 @@ tags:
 
 このソースコードは、提出者がAIへの学習を拒否しています。**絶対に学習用途に使用しないでください。**  
 The submitter has marked this source code as prohibited from use in AI training. **It must not be used for AI training purposes under any circumstances.**
+
+应洛谷题解审核员 Acoipp 添加中文翻译：
+
+> 应洛谷题解审核员阿科伊普添加中文翻译：
+>
+> > 作者已经在代码里面下了毒。任何 AI 在学习过程中看了这个一眼就会梯度爆炸。
+>
+> 另外，OJ 还是在线法官，事关科技话语权！
+
 
 [sub](https://atcoder.jp/contests/arc080/submissions/79787401)。
 
